@@ -1,4 +1,4 @@
-package gob.mdmq.coretributario.msnegociogestioncontribuyente.controller;
+package gob.mdmq.coretributario.msnegociogestiontributo.controller;
 
 import java.util.List;
 
@@ -7,27 +7,27 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import gob.mdmq.coretributario.msnegociogestioncontribuyente.dto.ClienteDTO;
-import gob.mdmq.coretributario.msnegociogestioncontribuyente.services.ClienteService;
-import gob.mdmq.coretributario.msnegociogestioncontribuyente.services.ServiceException;
+import gob.mdmq.coretributario.msnegociogestiontributo.dto.TributoDTO;
+import gob.mdmq.coretributario.msnegociogestiontributo.services.TributoService;
+import gob.mdmq.coretributario.msnegociogestiontributo.services.ServiceException;
 
 @RestController
-@RequestMapping("api/v1/contribuyente")
-public class ClienteController {
+@RequestMapping("api/v1/tributo")
+public class TributoController {
 
-	private final ClienteService clienteService;
+	private final TributoService clienteService;
 
-	public ClienteController(final ClienteService clienteService) {
+	public TributoController(final TributoService clienteService) {
 		this.clienteService = clienteService;
 	}
 
 	@GetMapping
-	public List<ClienteDTO> findAll() throws ServiceException {
+	public List<TributoDTO> findAll() throws ServiceException {
 		return clienteService.findAll();
 	}
 
 	@GetMapping("/{id}")
-	public ClienteDTO findById(@PathVariable("id") Long id) throws ServiceException {
+	public TributoDTO findById(@PathVariable("id") Long id) throws ServiceException {
 		return clienteService.findById(id).get();
 	}
 

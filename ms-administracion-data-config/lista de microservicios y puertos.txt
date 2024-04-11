@@ -6,6 +6,7 @@ ms-negocio-gestion-clientes					8082
 ms-negocio-gestion-vendedor					8083
 ms-negocio-gestion-pedidos					8084
 ms-negocio-gestion-contribuyente			8085
+ms-negocio-gestion-tributo					8090
 
 
 MS - ADMINISTRACION
