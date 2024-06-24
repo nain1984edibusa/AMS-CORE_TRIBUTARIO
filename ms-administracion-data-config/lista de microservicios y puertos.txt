@@ -1,12 +1,15 @@
 
 MS - NEGOCIO
--------------------------------------------------
-ms-negocio-gestion-productos				8081									
-ms-negocio-gestion-clientes					8082
-ms-negocio-gestion-vendedor					8083
-ms-negocio-gestion-pedidos					8084
-ms-negocio-gestion-contribuyente			8085
+-------------------------------------------------						
+ms-negocio-gestion-catalogo						8081
+ms-negocio-gestion-periodo-tributacion			8082
+ms-negocio-gestion-persuasivo-email-inscripcion	8085
+
+
 ms-negocio-gestion-tributo					8090
+ms-negocio-gestion-contribuyente			8091
+ms-negocio-gestion-productos				8092
+ms-negocio-gestion-clientes					8093
 
 
 MS - ADMINISTRACION

@@ -1,5 +1,5 @@
 server:
-   port: 8082
+   port: 8093
    
 # MySql #
 spring:
@@ -20,7 +20,7 @@ spring:
       client:
         url: http://localhost:8890
         instance:
-          management-base-url: http://localhost:8081
+          management-base-url: http://localhost:${server.port}
           
 # Server Registry Client
 eureka:

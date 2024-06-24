@@ -2,36 +2,35 @@ package gob.mdmq.coretributario.msnegociogestiontributo.controller;
 
 import java.util.List;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import gob.mdmq.coretributario.msnegociogestiontributo.dto.TipoContribuyenteDTO;
-import gob.mdmq.coretributario.msnegociogestiontributo.services.TipoContribuyenteService;
+import gob.mdmq.coretributario.msnegociogestiontributo.dto.PeriodoDTO;
+import gob.mdmq.coretributario.msnegociogestiontributo.services.PeriodoService;
 import gob.mdmq.coretributario.msnegociogestiontributo.services.ServiceException;
 
-@CrossOrigin
 @RestController
-@RequestMapping("api/v1/tipo-contribuyente")
-public class TipoContribuyenteController {
+@RequestMapping("api/v1/periodo-tributario")
+public class PeriodoController {
 
-	private final TipoContribuyenteService clienteService;
+	private final PeriodoService clienteService;
 
-	public TipoContribuyenteController(final TipoContribuyenteService clienteService) {
+	public PeriodoController(final PeriodoService clienteService) {
 		this.clienteService = clienteService;
 	}
 
 	@GetMapping
-	public List<TipoContribuyenteDTO> findAll() throws ServiceException {
+	public List<PeriodoDTO> findAll() throws ServiceException {
 		return clienteService.findAll();
 	}
 
 	@GetMapping("/{id}")
-	public TipoContribuyenteDTO findById(@PathVariable("id") Long id) throws ServiceException {
+	public PeriodoDTO findById(@PathVariable("id") Long id) throws ServiceException {
 		return clienteService.findById(id).get();
 	}
+
 	
 	/*
 	 * @GetMapping("/by-razonSocial") public List<ClienteEntity>

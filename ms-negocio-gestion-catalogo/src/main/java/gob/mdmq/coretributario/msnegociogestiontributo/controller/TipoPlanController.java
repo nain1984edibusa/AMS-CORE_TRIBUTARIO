@@ -2,6 +2,7 @@ package gob.mdmq.coretributario.msnegociogestiontributo.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,8 +12,9 @@ import gob.mdmq.coretributario.msnegociogestiontributo.dto.TipoPlanDTO;
 import gob.mdmq.coretributario.msnegociogestiontributo.services.TipoPlanService;
 import gob.mdmq.coretributario.msnegociogestiontributo.services.ServiceException;
 
+@CrossOrigin
 @RestController
-@RequestMapping("api/v1/tipoPlan")
+@RequestMapping("api/v1/tipo-plan")
 public class TipoPlanController {
 
 	private final TipoPlanService clienteService;

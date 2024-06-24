@@ -2,6 +2,7 @@ package gob.mdmq.coretributario.msnegociogestioncontribuyente.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import gob.mdmq.coretributario.msnegociogestioncontribuyente.dto.ClienteDTO;
 import gob.mdmq.coretributario.msnegociogestioncontribuyente.services.ClienteService;
 import gob.mdmq.coretributario.msnegociogestioncontribuyente.services.ServiceException;
 
+@CrossOrigin
 @RestController
 @RequestMapping("api/v1/contribuyente")
 public class ClienteController {

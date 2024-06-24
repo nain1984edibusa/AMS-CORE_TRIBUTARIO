@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import lombok.RequiredArgsConstructor;
 import gob.mdmq.coretributario.msnegociogestiontributo.dto.TributoDTO;
 import gob.mdmq.coretributario.msnegociogestiontributo.mappers.TributoMapper;
 import gob.mdmq.coretributario.msnegociogestiontributo.repository.TributoRepository;
+
 
 @RequiredArgsConstructor
 @Service
