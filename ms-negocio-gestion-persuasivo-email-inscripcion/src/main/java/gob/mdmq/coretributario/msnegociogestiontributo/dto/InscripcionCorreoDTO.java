@@ -19,7 +19,7 @@ public class InscripcionCorreoDTO{
 	
 	private String razonSocial;
 	
-	private Integer periodo;
+	private Integer anio;
 	
 	private String personaSociedad;
 	

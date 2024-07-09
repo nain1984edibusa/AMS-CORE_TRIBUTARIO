@@ -2,6 +2,7 @@ package gob.mdmq.coretributario.msnegociogestiontributo.controller;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import gob.mdmq.coretributario.msnegociogestiontributo.dto.ParametroDTO;
 import gob.mdmq.coretributario.msnegociogestiontributo.services.ParametroService;
 import gob.mdmq.coretributario.msnegociogestiontributo.services.ServiceException;
 
+@CrossOrigin
 @RestController
 @RequestMapping("api/v1/parametro")
 public class ParametroController {
@@ -31,8 +33,6 @@ public class ParametroController {
 		return clienteService.findById(id).get();
 	}
 	
-	
-
 	
 	/*
 	 * @GetMapping("/by-razonSocial") public List<ClienteEntity>

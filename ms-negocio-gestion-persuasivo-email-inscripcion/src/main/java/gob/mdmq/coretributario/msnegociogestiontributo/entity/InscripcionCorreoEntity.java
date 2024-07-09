@@ -23,7 +23,8 @@ public class InscripcionCorreoEntity implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+
 	@Column(name = "NUMERO_RUC")
 	private String numeroRuc;
 	
@@ -31,7 +32,7 @@ public class InscripcionCorreoEntity implements Serializable{
 	private String razonSocial;
 	
 	@Column(name = "ANIO")
-	private Integer periodo;
+	private Integer anio;
 	
 	@Column(name = "PERSONA_SOCIEDAD")
 	private String personaSociedad;

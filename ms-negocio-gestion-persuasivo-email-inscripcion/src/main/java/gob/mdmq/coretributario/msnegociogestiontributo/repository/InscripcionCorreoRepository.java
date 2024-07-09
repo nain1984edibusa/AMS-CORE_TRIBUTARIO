@@ -11,32 +11,10 @@ import gob.mdmq.coretributario.msnegociogestiontributo.entity.InscripcionCorreoE
 @Repository
 public interface InscripcionCorreoRepository extends JpaRepository<InscripcionCorreoEntity, String>{
 
-	
 	//JPQL
 	  
-	/*
-	 * @Query("Select r from Periodo r where r.periodoId = 1 ")
-	 * List<InscripcionCorreoEntity> findAllCustom();
-	 */
-	 
-	  
-		
-		/*
-		 * @Query("Select p from Tributo p where upper(p.razonSocial) like upper(:razonSocial) and p.estado='1'"
-		 * ) List<InscripcionCorreoEntity> findByLikeRazonSocial(@Param("razonSocial")
-		 * String razonSocial);
-		 */
-		 
-	  
-	  //SQL
-	  
-	  @Modifying
-	  
-	  @Query(nativeQuery = true, value =
-	  "update tbl_cliente set estado='0' where cliente_id=:id") void
-	  deleteCustom(@Param("id") Long id);
-	 
-	
-	
-	// Agregates(DTO, Optimizacion de consultas)
+	  @Query("Select p from IncripcionCorreosVta p where p.numeroRuc like upper(:numeroRuc)"
+	  ) List<InscripcionCorreoEntity> findByNumeroRuc(@Param("numeroRuc")
+	  String numeroRuc);
+
 }

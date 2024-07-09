@@ -23,4 +23,46 @@ public class InscripcionCorreoServiceImpl implements InscripcionCorreoService {
 
 		return this.clienteMapper.toDTO(this.clienteRepository.findAll());
 	}
+
+
+	//Busqueda por NumeroRuc
+	@Override
+		public List<InscripcionCorreoDTO> findByNumeroRuc(String numeroRuc) throws ServiceException  {
+			
+			return this.clienteMapper.toDTO(this.clienteRepository.findByNumeroRuc(numeroRuc));
+		}
+		
+	@Override
+	public List<InscripcionCorreoDTO> findByLikeObject(InscripcionCorreoDTO t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public InscripcionCorreoDTO save(InscripcionCorreoDTO t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public InscripcionCorreoDTO update(InscripcionCorreoDTO t) throws ServiceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void delete(Long id) throws ServiceException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Optional<InscripcionCorreoDTO> findById(Long id) throws ServiceException {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
 }

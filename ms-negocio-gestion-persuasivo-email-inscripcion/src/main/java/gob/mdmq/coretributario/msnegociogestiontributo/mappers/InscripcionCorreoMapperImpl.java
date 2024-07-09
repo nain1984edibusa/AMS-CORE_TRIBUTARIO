@@ -1,11 +1,13 @@
 package gob.mdmq.coretributario.msnegociogestiontributo.mappers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
 import gob.mdmq.coretributario.msnegociogestiontributo.dto.InscripcionCorreoDTO;
 import gob.mdmq.coretributario.msnegociogestiontributo.entity.InscripcionCorreoEntity;
+import gob.mdmq.coretributario.msnegociogestiontributo.services.ServiceException;
 
 @Component
 public class InscripcionCorreoMapperImpl implements InscripcionCorreoMapper {
@@ -14,7 +16,7 @@ public class InscripcionCorreoMapperImpl implements InscripcionCorreoMapper {
 	public InscripcionCorreoDTO toDTO(InscripcionCorreoEntity e) {
 		return InscripcionCorreoDTO.builder().numeroRuc(e.getNumeroRuc())
 				.razonSocial(e.getRazonSocial())
-				.periodo(e.getPeriodo())
+				.anio(e.getAnio())
 				.personaSociedad(e.getPersonaSociedad())
 				.obligado(e.getObligado())
 				.fechaInicio(e.getFechaInicio())
@@ -28,5 +30,6 @@ public class InscripcionCorreoMapperImpl implements InscripcionCorreoMapper {
 	public List<InscripcionCorreoDTO> toDTO(List<InscripcionCorreoEntity> lst) {
 		return lst.stream().map(e -> toDTO(e)).toList();
 	}
+	
 
 }

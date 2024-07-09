@@ -15,8 +15,9 @@ ms-negocio-gestion-clientes					8093
 MS - ADMINISTRACION
 -------------------------------------------------
 
+ms-administracion-api-gateway				8887
 ms-administracion-server-config				8888
 ms-administracion-server-registry			8889
 ms-administracion-server-admin			    8890
 
-ms-administracion-api-gateway				8887
+
