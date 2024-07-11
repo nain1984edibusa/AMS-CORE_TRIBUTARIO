@@ -19,7 +19,7 @@ public class InscripcionCorreoMapperImpl implements InscripcionCorreoMapper {
 				.anio(e.getAnio())
 				.personaSociedad(e.getPersonaSociedad())
 				.obligado(e.getObligado())
-				.fechaInicio(e.getFechaInicio())
+				.fechaSalida(e.getFechaSalida())
 				.baseImponible(e.getBaseImponible())
 				.numeroIntentos(e.getNumeroIntentos())
 				.potencialRecaudar(e.getPotencialRecaudar())

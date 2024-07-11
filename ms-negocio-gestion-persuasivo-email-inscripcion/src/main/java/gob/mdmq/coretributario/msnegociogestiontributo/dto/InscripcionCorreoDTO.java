@@ -25,7 +25,7 @@ public class InscripcionCorreoDTO{
 	
 	private String obligado;
 	
-	private Date fechaInicio;
+	private Date fechaSalida;
 	
 	private BigDecimal baseImponible;
 		

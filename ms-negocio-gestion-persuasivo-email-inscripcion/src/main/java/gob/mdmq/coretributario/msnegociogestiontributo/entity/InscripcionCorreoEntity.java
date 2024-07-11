@@ -41,18 +41,20 @@ public class InscripcionCorreoEntity implements Serializable{
 	private String obligado;
 	
 	@Column(name = "FECHA_SALIDA", nullable = true)
-	private Date fechaInicio;
+	private Date fechaSalida;
 	
 	@Column(name = "BASE_IMPONIBLE", nullable = true)
 	private BigDecimal baseImponible;
 		
+	@Column(name = "TOTAL_PATRIMONIO_NETO", nullable = true)
+	private BigDecimal totalPatrimonioNeto;
+	
 	@Column(name = "NUMERO_INTENTOS")
 	private Integer numeroIntentos;
 	
-	@Column(name = "POTENCIAL_RECAUDAR", nullable = true)
+	@Column(name = "POTENCIAL_RECAUDAR")
 	private BigDecimal potencialRecaudar;
 	
-	@Column(name = "TOTAL_PATRIMONIO_NETO", nullable = true)
-	private BigDecimal totalPatrimonioNeto;
+	
 }
 
