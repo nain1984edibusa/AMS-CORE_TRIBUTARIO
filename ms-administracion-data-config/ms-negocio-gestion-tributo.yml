@@ -1,0 +1,48 @@
+server:
+   port: 8090
+   
+# MySql #
+spring:
+  jpa: 
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: true
+  datasource: 
+    url: jdbc:sqlserver://172.22.16.34;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIBUTARIO
+    username: GestionMunicipalCoreTributarioUsuario
+    password: Gestion%desa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+#   <add name="CoreTributarioModel" connectionString=
+#   "data source=172.22.16.34;initial catalog=MDMQ_CORE_TRIBUTARIO;user id=GestionMunicipalCoreTributarioUsuario
+#   ;password=Gestion%desa
+#   ;multipleactiveresultsets=True;application name=EntityFramework" providerName="System.Data.SqlClient" />  
+
+# spring.datasource.url=jdbc:sqlserver://localhost;databaseName=dbtest
+#    spring.datasource.username=sa
+#    spring.datasource.password=Pass@$#
+#    spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    spring.jpa.database-platform=org.hibernate.dialect.SQLServer2012Dialect
+
+# Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port}
+          
+# Server Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+         
+# Endpoints exposition
+management:
+  endpoints:
+    web:
+     exposure:
+       include: "*"
+     health:
+       show-details: always

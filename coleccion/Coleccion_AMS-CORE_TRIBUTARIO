@@ -1,0 +1,870 @@
+{
+	"info": {
+		"_postman_id": "4f78fd82-3636-4453-b9e6-6dd977b5822b",
+		"name": "AMS-CORE_TRIBUTARIO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26510914"
+	},
+	"item": [
+		{
+			"name": "negocio",
+			"item": [
+				{
+					"name": "ms-negocio-gestion-contribuyente",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8091/api/v1/contribuyente",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8091",
+									"path": [
+										"api",
+										"v1",
+										"contribuyente"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/contribuyente/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"contribuyente",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-tributo",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/v1/tributo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"tributo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8090/api/v1/tributo/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"tributo",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-periodo-tributario",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/v1/periodo-tributario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"periodo-tributario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/v1/periodo-tributario/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"periodo-tributario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-persuasivo-email-inscripcion",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/email-inscripcion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"email-inscripcion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findByNumeroRuc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8085/api/v1/email-inscripcion/1756235618001",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8085",
+									"path": [
+										"api",
+										"v1",
+										"email-inscripcion",
+										"1756235618001"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-catalogo",
+					"item": [
+						{
+							"name": "parametro",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/parametro",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"parametro"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/parametro/45",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"parametro",
+												"45"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "tipo-plan",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tipo-plan",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tipo-plan"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tipo-plan/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tipo-plan",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "tributo",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tributo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tributo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tributo/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tributo",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "tipo-contribuyente",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tipo-contribuyente",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tipo-contribuyente"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tipo-contribuyente/2",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tipo-contribuyente",
+												"2"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "tipo-proceso",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tipo-proceso",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tipo-proceso"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/api/v1/tipo-proceso/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"api",
+												"v1",
+												"tipo-proceso",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "administracion",
+			"item": [
+				{
+					"name": "ms-administracion-server-config",
+					"item": [
+						{
+							"name": "healt-check",
+							"item": [
+								{
+									"name": "actuator",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/actuator",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"actuator"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actuator-health",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/actuator/health",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"actuator",
+												"health"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "actuator-health-liveness",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/actuator/health/liveness",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"actuator",
+												"health",
+												"liveness"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "microservices",
+							"item": [
+								{
+									"name": "ms-negocio-gestion-contribuyente",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/ms-negocio-gestion-clientes/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"ms-negocio-gestion-clientes",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ms-negocio-gestion-tributo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/ms-negocio-gestion-tributo/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"ms-negocio-gestion-tributo",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ms-administracion-api-gateway",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/ms-administracion-api-gateway/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"ms-administracion-api-gateway",
+												"default"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ms-administracion-api-gateway",
+					"item": [
+						{
+							"name": "apí-gateway-internas",
+							"item": [
+								{
+									"name": "ms-negocio-gestion-catalogo",
+									"item": [
+										{
+											"name": "tipo-plan-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-catalogo/api/v1/tipo-plan",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-catalogo",
+														"api",
+														"v1",
+														"tipo-plan"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "tributo-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-catalogo/api/v1/tributo",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-catalogo",
+														"api",
+														"v1",
+														"tributo"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "tipo-contribuyente-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-catalogo/api/v1/tipo-contribuyente",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-catalogo",
+														"api",
+														"v1",
+														"tipo-contribuyente"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "tipo-proceso-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-catalogo/api/v1/tipo-proceso",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-catalogo",
+														"api",
+														"v1",
+														"tipo-proceso"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-persuasivo-email-inscripcion",
+									"item": [
+										{
+											"name": "persuasivo-email-inscripcion-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-persuasivo-email-inscripcion/api/v1/email-inscripcion",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-persuasivo-email-inscripcion",
+														"api",
+														"v1",
+														"email-inscripcion"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "parametrizacion-tributo-api-gateway",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/ms-negocio-gestion-tributo/api/v1/tributo",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"ms-negocio-gestion-tributo",
+												"api",
+												"v1",
+												"tributo"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "contribuyente-api-gateway",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/ms-negocio-gestion-contribuyente/api/v1/contribuyente",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"ms-negocio-gestion-contribuyente",
+												"api",
+												"v1",
+												"contribuyente"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "apí-gateway-externas",
+							"item": [
+								{
+									"name": "albums",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://jsonplaceholder.typicode.com/albums",
+											"protocol": "https",
+											"host": [
+												"jsonplaceholder",
+												"typicode",
+												"com"
+											],
+											"path": [
+												"albums"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "albums-api-gateway",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/albums",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"albums"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "actuator",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8887/actuator",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8887",
+									"path": [
+										"actuator"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "gateway",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8887/actuator/gateway",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8887",
+									"path": [
+										"actuator",
+										"gateway"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "routes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8887/actuator/gateway/routes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8887",
+									"path": [
+										"actuator",
+										"gateway",
+										"routes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,23 @@
+
+MS - NEGOCIO
+-------------------------------------------------						
+ms-negocio-gestion-catalogo						8081
+ms-negocio-gestion-periodo-tributacion			8082
+ms-negocio-gestion-persuasivo-email-inscripcion	8085
+
+
+ms-negocio-gestion-tributo					8090
+ms-negocio-gestion-contribuyente			8091
+ms-negocio-gestion-productos				8092
+ms-negocio-gestion-clientes					8093
+
+
+MS - ADMINISTRACION
+-------------------------------------------------
+
+ms-administracion-api-gateway				8887
+ms-administracion-server-config				8888
+ms-administracion-server-registry			8889
+ms-administracion-server-admin			    8890
+
+
