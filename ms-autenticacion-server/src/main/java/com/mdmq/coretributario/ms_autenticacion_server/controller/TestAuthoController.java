@@ -5,23 +5,24 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
-@PreAuthorize("denyAll()")
+//@PreAuthorize("denyAll()")
 
 public class TestAuthoController {
 	
-	@GetMapping("/hello")
-	@PreAuthorize("permitAll()")
-    public String hello(){
-        return "Hello World";
-    }
-
-	@GetMapping("/hello-security")
-	@PreAuthorize("hasAnyAuthority('CREATE')")
-    public String helloSecurity(){
-        return "Hello World security";
-    }
+//	@GetMapping("/hello")
+//	@PreAuthorize("permitAll()")
+//    public String hello(){
+//        return "Hello World";
+//    }
+//
+//	@GetMapping("/hello-security")
+//	@PreAuthorize("hasAnyAuthority('CREATE')")
+//    public String helloSecurity(){
+//        return "Hello World security";
+//    }
 	
 	@GetMapping("/get")
+	//@PreAuthorize("hasAnyAuthority('CREATE')")
     public String helloGet(){
         return "Hello World - GET";
     }

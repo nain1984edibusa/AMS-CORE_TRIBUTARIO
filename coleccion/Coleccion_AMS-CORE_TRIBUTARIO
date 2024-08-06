@@ -713,48 +713,29 @@
 									]
 								},
 								{
-									"name": "parametrizacion-tributo-api-gateway",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "http://localhost:8887/ms-negocio-gestion-tributo/api/v1/tributo",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "8887",
-											"path": [
-												"ms-negocio-gestion-tributo",
-												"api",
-												"v1",
-												"tributo"
-											]
+									"name": "ms-autenticacion-server-security",
+									"item": [
+										{
+											"name": "auth",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8080/auth/login",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8080",
+													"path": [
+														"auth",
+														"login"
+													]
+												}
+											},
+											"response": []
 										}
-									},
-									"response": []
-								},
-								{
-									"name": "contribuyente-api-gateway",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "http://localhost:8887/ms-negocio-gestion-contribuyente/api/v1/contribuyente",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "8887",
-											"path": [
-												"ms-negocio-gestion-contribuyente",
-												"api",
-												"v1",
-												"contribuyente"
-											]
-										}
-									},
-									"response": []
+									]
 								}
 							]
 						},
@@ -857,6 +838,133 @@
 										"actuator",
 										"gateway",
 										"routes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "autorizacion",
+			"item": [
+				{
+					"name": "ms-administracion-server-security-jwt",
+					"item": [
+						{
+							"name": "autho",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "santiago",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/auth/hello",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"hello"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "autho-security",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "anyi",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/auth/hello-security",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"hello-security"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ms-autenticacion-server",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "ANYI",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/auth/get",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"auth",
+										"get"
 									]
 								}
 							},

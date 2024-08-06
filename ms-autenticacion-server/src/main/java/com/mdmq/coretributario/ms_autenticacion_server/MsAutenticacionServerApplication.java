@@ -9,12 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
-/*import com.mdmq.coretributario.ms_autenticacion_server.entity.PermissionEntity;
+import com.mdmq.coretributario.ms_autenticacion_server.entity.PermissionEntity;
 import com.mdmq.coretributario.ms_autenticacion_server.entity.RoleEntity;
 import com.mdmq.coretributario.ms_autenticacion_server.entity.RoleEnum;
 import com.mdmq.coretributario.ms_autenticacion_server.entity.UserEntity;
 import com.mdmq.coretributario.ms_autenticacion_server.repository.UserRepository;
-*/
+
 
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -23,10 +23,10 @@ public class MsAutenticacionServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MsAutenticacionServerApplication.class, args);
 	}
-		/* @Bean
+		@Bean
 		    CommandLineRunner init(UserRepository userRepository) {
 		        return args -> {
-		             Create PERMISSIONS 
+		            // Create PERMISSIONS 
 		            PermissionEntity createPermission = PermissionEntity.builder()
 		                    .name("CREATE")
 		                    .build();
@@ -47,7 +47,7 @@ public class MsAutenticacionServerApplication {
 		                    .name("REFACTOR")
 		                    .build();
 
-		             Create ROLES 
+		            // Create ROLES 
 		            RoleEntity roleAdmin = RoleEntity.builder()
 		                    .roleEnum(RoleEnum.ADMIN)
 		                    .permissionList(Set.of(createPermission, readPermission, updatePermission, deletePermission))
@@ -68,7 +68,7 @@ public class MsAutenticacionServerApplication {
 		                    .permissionList(Set.of(createPermission, readPermission, updatePermission, deletePermission, refactorPermission))
 		                    .build();
 
-		             CREATE USERS 
+		            //CREATE USERS 
 		            UserEntity userSantiago = UserEntity.builder()
 		                    .username("santiago")
 		                    .password("1234")
@@ -111,5 +111,5 @@ public class MsAutenticacionServerApplication {
 
 		            userRepository.saveAll(List.of(userSantiago, userDaniel, userAndrea, userAnyi));
 		        };
-		 }*/
+		 }
 }

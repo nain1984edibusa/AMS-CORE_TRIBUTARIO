@@ -31,35 +31,36 @@ import java.util.List;
 @EnableMethodSecurity
 public class SecurityConfig {
 
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
-//        return httpSecurity
-//                .csrf(csrf -> csrf.disable())
-//                .httpBasic(Customizer.withDefaults())
-//                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-//                .authorizeHttpRequests(http -> {
-//                  
-//                	// Configurar los endpoints publicos
-//                	http.requestMatchers(HttpMethod.GET, "/auth/hello").permitAll();
-//                	
-//                	// Cofigurar los endpoints privados
-//                	http.requestMatchers(HttpMethod.GET, "/auth/hello-security").hasAnyAuthority("CREATE");
-//                	
-//                	// Configurar el resto de endpoint - NO ESPECIFICADOS
-//                	http.anyRequest().denyAll();
-//              })
-//                .build();
-//    }
-    
-	/*Con anotaciones*/
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
                 .csrf(csrf -> csrf.disable())
                 .httpBasic(Customizer.withDefaults())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authorizeHttpRequests(http -> {
+                  
+                	// Configurar los endpoints publicos
+                	http.requestMatchers(HttpMethod.GET, "/auth/get").permitAll();
+                	
+                	// Cofigurar los endpoints privados
+                	http.requestMatchers(HttpMethod.POST, "/auth/post").hasAnyRole("ADMIN", "DEVELOPER");
+                	http.requestMatchers(HttpMethod.PATCH, "/auth/patch").hasAnyAuthority("REFACTOR");
+                	
+                	// Configurar el resto de endpoint - NO ESPECIFICADOS
+                	http.anyRequest().denyAll();
+              })
                 .build();
     }
+    
+	/*Con anotaciones*/
+//    @Bean
+//    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+//        return httpSecurity
+//                .csrf(csrf -> csrf.disable())
+//                .httpBasic(Customizer.withDefaults())
+//                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+//                .build();
+//    }
     
 
     @Bean
@@ -68,31 +69,31 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationProvider authenticationProvider(){
+    public AuthenticationProvider authenticationProvider(UserDetailsServiceImpl userDetailsService){
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(passwordEncoder());
-        provider.setUserDetailsService(userDetailsService());
+        provider.setUserDetailsService(userDetailsService);
         return provider;
     }
     
-    @Bean
-    public UserDetailsService userDetailsService() {
-    	List<UserDetails> userDetailsList = new ArrayList<>();
-    	
-    	userDetailsList.add(User.withUsername("santiago")
-			    			.password("1234")
-			    			.roles("ADMIN")
-			    			.authorities("READ", "CREATE")
-			    			.build());
-    	
-    	userDetailsList.add(User.withUsername("daniel")
-    			.password("1234")
-    			.roles("USER")
-    			.authorities("READ")
-    			.build());
-    	
-    	return new InMemoryUserDetailsManager(userDetailsList);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//    	List<UserDetails> userDetailsList = new ArrayList<>();
+//    	
+//    	userDetailsList.add(User.withUsername("santiago")
+//			    			.password("1234")
+//			    			.roles("ADMIN")
+//			    			.authorities("READ", "CREATE")
+//			    			.build());
+//    	
+//    	userDetailsList.add(User.withUsername("daniel")
+//    			.password("1234")
+//    			.roles("USER")
+//    			.authorities("READ")
+//    			.build());
+//    	
+//    	return new InMemoryUserDetailsManager(userDetailsList);
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder(){
