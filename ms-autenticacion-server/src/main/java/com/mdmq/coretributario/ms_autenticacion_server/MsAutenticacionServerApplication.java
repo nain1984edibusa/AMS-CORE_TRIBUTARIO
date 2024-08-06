@@ -6,6 +6,7 @@ import java.util.Set;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
 /*import com.mdmq.coretributario.ms_autenticacion_server.entity.PermissionEntity;
@@ -14,6 +15,8 @@ import com.mdmq.coretributario.ms_autenticacion_server.entity.RoleEnum;
 import com.mdmq.coretributario.ms_autenticacion_server.entity.UserEntity;
 import com.mdmq.coretributario.ms_autenticacion_server.repository.UserRepository;
 */
+
+@EnableDiscoveryClient
 @SpringBootApplication
 public class MsAutenticacionServerApplication {
 
