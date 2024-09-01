@@ -28,4 +28,16 @@ public class AuthController {
     {
         return ResponseEntity.ok(authService.register(request));
     }
+    
+//    @PostMapping(value = "login")
+//    public String login()
+//    {
+//        return "Login from public endpoint";
+//    }
+//
+//    @PostMapping(value = "register")
+//    public String registre()
+//    {
+//        return "Register from public endpoint";
+//    }
 }
