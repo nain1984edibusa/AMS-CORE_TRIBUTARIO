@@ -3,25 +3,25 @@
 #spring.datasource.username=root
 #spring.datasource.password=123456
 #spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
-
-#spring:
-#  application:
-#    name: ms-authentication-jwt
 #
-#  config:
-#    import: optional:configserver:http://localhost:8888
-
-server:
-   port: 9090   
-# MySql #
 spring:
-  jpa: 
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate: 
-      ddl-auto: update
-    show-sql: true
-  datasource: 
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/securitydb?createDatabaseIfNotExist=true&useSSL=true
-    username: root
-    password: 123456
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: ms-authentication-jwt
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+#server:
+#   port: 9090   
+## MySql #
+#spring:
+#  jpa: 
+#    database-platform: org.hibernate.dialect.MySQL8Dialect
+#    hibernate: 
+#      ddl-auto: update
+#    show-sql: true
+#  datasource: 
+#    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/securitydb?createDatabaseIfNotExist=true&useSSL=true
+#    username: root
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
