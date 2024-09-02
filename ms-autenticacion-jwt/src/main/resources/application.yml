@@ -6,10 +6,10 @@
 #
 spring:
   application:
-    name: ms-authentication-jwt
+    name: ms-autenticacion-jwt
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: configserver:http://localhost:8888
 
 #server:
 #   port: 9090   
