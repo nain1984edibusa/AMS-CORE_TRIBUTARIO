@@ -17,7 +17,7 @@ public interface ClienteRepository extends JpaRepository<ClienteEntity, Long>{
 	@Query("Select p from Cliente p where p.estado='1'")
 	List<ClienteEntity> findAllCustom();
 	
-	@Query("Select p from Cliente p where upper(p.razonSocial) like upper(:razonSocial) and p.estado='1'")
+	@Query("Select p from Cliente p where upper(p.razonSocial) like upper(:razonSocial)")
 	List<ClienteEntity> findByLikeRazonSocial(@Param("razonSocial") String razonSocial);
 
 	//SQL

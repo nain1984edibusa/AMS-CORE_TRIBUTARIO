@@ -52,4 +52,9 @@ public class ClienteServiceImpl implements ClienteService {
 		return Optional.ofNullable(clienteMapper.toDTO(clienteRepository.findById(id).get()));
 	}
 
+	@Override
+	public List<ClienteDTO> findByLikeRazonSocial(String razonSocial) throws ServiceException {
+
+		return this.clienteMapper.toDTO(this.clienteRepository.findByLikeRazonSocial(razonSocial));
+	}
 }

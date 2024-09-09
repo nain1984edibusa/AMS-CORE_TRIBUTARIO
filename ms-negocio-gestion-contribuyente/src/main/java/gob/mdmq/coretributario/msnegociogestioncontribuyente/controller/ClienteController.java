@@ -2,6 +2,7 @@ package gob.mdmq.coretributario.msnegociogestioncontribuyente.controller;
 
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,14 +28,23 @@ public class ClienteController {
 	}
 
 	@GetMapping("/{id}")
-	public ClienteDTO findById(@PathVariable("id") Long id) throws ServiceException {
-		return clienteService.findById(id).get();
+	
+	public ResponseEntity<ClienteDTO> findById(@PathVariable("id") Long id) throws ServiceException {
+		return ResponseEntity.ok(clienteService.findById(id).get());
 	}
 
+	 @GetMapping("/by-razonSocial/{razonSocial}")
+	    public ResponseEntity<List<ClienteDTO>> findByLikeRazonSocial(@PathVariable("razonSocial") String razonSocial) {
+	        try {
+	            return ResponseEntity.ok(clienteService.findByLikeRazonSocial(razonSocial));
+	        } catch (Exception e) {
+	            return ResponseEntity.badRequest().build();
+
+	        }
+	    }
 	
 	/*
 	 * @GetMapping("/by-razonSocial") public List<ClienteEntity>
-	 * findByLikeRazonSocial(@RequestParam String razonSocial) { return
 	 * clienteService.findByLikeRazonSocial(razonSocial); }
 	 * 
 	 * @GetMapping("/{id}") public Optional<ClienteEntity> findById(@PathVariable

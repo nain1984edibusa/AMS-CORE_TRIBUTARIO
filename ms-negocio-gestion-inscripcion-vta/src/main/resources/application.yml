@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ms-negocio-gestion-inscripcion-vta
+
+  config:
+    import: optional:configserver:http://localhost:8888
+

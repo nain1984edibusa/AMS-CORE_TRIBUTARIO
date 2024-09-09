@@ -39,17 +39,52 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8085/api/v1/contribuyente/1",
+									"raw": "http://localhost:8091/api/v1/contribuyente/3",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8085",
+									"port": "8091",
 									"path": [
 										"api",
 										"v1",
 										"contribuyente",
-										"1"
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findByRazonSocial",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"razonSocial\": \"movistar\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8091/api/v1/contribuyente/by-razonSocial/twenty",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8091",
+									"path": [
+										"api",
+										"v1",
+										"contribuyente",
+										"by-razonSocial",
+										"twenty"
 									]
 								}
 							},
@@ -740,12 +775,34 @@
 											"response": []
 										},
 										{
+											"name": "inscripcion-vta-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-inscripcion-vta",
+														"api",
+														"v1",
+														"inscripcion-vta"
+													]
+												}
+											},
+											"response": []
+										},
+										{
 											"name": "persuasivo-email-inscripcion-numeroRuc-api-gateway-",
 											"request": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "http://localhost:8887/ms-negocio-gestion-persuasivo-email-inscripcion/api/v1/email-inscripcion?numeroRuc=1726850223001",
+													"raw": "http://localhost:8887/ms-negocio-gestion-persuasivo-email-inscripcion/api/v1/email-inscripcion/by-numeroRuc/0101449601001",
 													"protocol": "http",
 													"host": [
 														"localhost"
@@ -755,13 +812,33 @@
 														"ms-negocio-gestion-persuasivo-email-inscripcion",
 														"api",
 														"v1",
-														"email-inscripcion"
+														"email-inscripcion",
+														"by-numeroRuc",
+														"0101449601001"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "inscripcion-vta-numeroRuc-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta/by-numeroRuc/1721965182001",
+													"protocol": "http",
+													"host": [
+														"localhost"
 													],
-													"query": [
-														{
-															"key": "numeroRuc",
-															"value": "1726850223001"
-														}
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-inscripcion-vta",
+														"api",
+														"v1",
+														"inscripcion-vta",
+														"by-numeroRuc",
+														"1721965182001"
 													]
 												}
 											},
@@ -1119,6 +1196,68 @@
 										"api",
 										"v1",
 										"demo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:9090/api/v1/user/1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9090/api/v1/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:9090/api/v1/user/1",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZHVhcmRvQGdtYWlsLmNvbSIsImlhdCI6MTcyNTI0NjEwMywiZXhwIjoxNzI1MjQ3NTQzfQ.YX6Ve5rWIGYhteFcIfZ2xfCxr1VnXiIRGVNQUfVTvyA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"username\": \"eduardo@gmail.com\",\r\n    \"firstname\": \"Carlos\",\r\n    \"lastname\": \"Bustillos\",\r\n    \"country\": \"Ecuador\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9090/api/v1/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9090",
+									"path": [
+										"api",
+										"v1",
+										"user"
 									]
 								}
 							},
