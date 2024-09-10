@@ -30,12 +30,11 @@ public class InscripcionVtaController {
 	}
 	 
 	@GetMapping("/by-numeroRuc/{numeroRuc}")
-	    public ResponseEntity<List<InscripcionVtaDTO>> findByNumeroRuc(@PathVariable("numeroRuc") String numeroRuc) {
-	        try {
-	            return ResponseEntity.ok(clienteService.findByNumeroRuc(numeroRuc));
-	        } catch (Exception e) {
-	            return ResponseEntity.badRequest().build();
-
-	        }
-	    }
+    public ResponseEntity<List<InscripcionVtaDTO>> findByNumeroRuc(@PathVariable("numeroRuc") String numeroRuc) {
+        try {
+            return ResponseEntity.ok(clienteService.findByNumeroRuc(numeroRuc));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

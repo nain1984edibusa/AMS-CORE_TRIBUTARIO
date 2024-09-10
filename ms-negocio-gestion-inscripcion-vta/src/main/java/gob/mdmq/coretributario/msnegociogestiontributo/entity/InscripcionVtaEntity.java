@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import org.springframework.data.annotation.Immutable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,12 +21,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity(name = "IncripcionVta")
 @Table(name = "GBT_INSCRIPCION_VTA", catalog = "MDMQ_CORE_TRIBUTARIO", schema = "BRECHA")
-public class InscripcionVtaEntity implements Serializable{
+@Immutable
+public class InscripcionVtaEntity{
 
-	private static final long serialVersionUID = 1L;
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-
 	@Column(name = "NUMERO_RUC")
 	private String numeroRuc;
 	
