@@ -843,6 +843,32 @@
 												}
 											},
 											"response": []
+										},
+										{
+											"name": "inscripcion-vta-anio-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta/by-anio-obligado-personaSociedad/2022/N/PNL",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-inscripcion-vta",
+														"api",
+														"v1",
+														"inscripcion-vta",
+														"by-anio-obligado-personaSociedad",
+														"2022",
+														"N",
+														"PNL"
+													]
+												}
+											},
+											"response": []
 										}
 									]
 								},

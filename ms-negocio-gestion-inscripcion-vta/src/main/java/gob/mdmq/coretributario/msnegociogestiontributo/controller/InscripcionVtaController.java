@@ -37,4 +37,15 @@ public class InscripcionVtaController {
             return ResponseEntity.badRequest().build();
         }
     }
+	
+	@GetMapping("/by-anio-obligado-personaSociedad/{anio}/{obligado}/{personaSociedad}")
+    public ResponseEntity<List<InscripcionVtaDTO>> findByAnio(@PathVariable("anio") Short anio
+    		, @PathVariable("obligado") String obligado
+    		, @PathVariable("personaSociedad") String personaSociedad) {
+        try {
+            return ResponseEntity.ok(clienteService.findByAnioObligadoPersonaSociedad(anio, obligado, personaSociedad));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
+    }
 }

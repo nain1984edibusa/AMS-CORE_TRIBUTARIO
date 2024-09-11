@@ -64,5 +64,10 @@ public class InscripcionVtaServiceImpl implements InscripcionVtaService {
 		return this.clienteMapper.toDTO(this.clienteRepository.findByNumeroRuc(numeroRuc));
 	}
 	
+	@Override
+	public List<InscripcionVtaDTO> findByAnioObligadoPersonaSociedad(Short anio, String obligado, String personaSociedad) throws ServiceException  {
+		
+		return this.clienteMapper.toDTO(this.clienteRepository.findByAnioObligadoPersonaSociedad(anio, obligado, personaSociedad));
+	}
 
 }

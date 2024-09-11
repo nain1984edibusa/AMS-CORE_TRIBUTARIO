@@ -12,17 +12,18 @@ import gob.mdmq.coretributario.msnegociogestiontributo.entity.InscripcionVtaEnti
 public interface InscripcionVtaRepository extends JpaRepository<InscripcionVtaEntity, String>{
 
 	//JPQL
-	  
-//	  @Query(value = "Select * from IncripcionVta p where p.numeroRuc = ?1" , nativeQuery = true) 
-//	  List<InscripcionVtaEntity> findByNumeroRuc(@Param("numeroRuc") String numeroRuc);
-	  
-	  
 	  @Query("SELECT u FROM IncripcionVta u WHERE u.numeroRuc = ?1")
 	  List<InscripcionVtaEntity> findByNumeroRuc(String numeroRuc);
-	  
-	  
-	  
-//	  @Query("Select * from IncripcionVta p where p.numeroRuc = :numeroRuc") 
+	
+//	 @Query("Select p from IncripcionVta p where p.numeroRuc = :numeroRuc") 
 //	  List<InscripcionVtaEntity> findByNumeroRuc(@Param("numeroRuc") String numeroRuc);
-
+	
+	//Query nativa
+//	  @Query(value = "Select * from InscripcionVta p where p.numeroRuc = ?1" , nativeQuery = true) 
+//	  List<InscripcionVtaEntity> findByNumeroRuc(String numeroRuc);
+	  
+	  
+	  @Query("SELECT u FROM IncripcionVta u WHERE u.anio = ?1 and u.obligado = ?2 and u.personaSociedad =?3")
+	  List<InscripcionVtaEntity> findByAnioObligadoPersonaSociedad(Short anio, String obligado, String personaSociedad);
+	  
 }

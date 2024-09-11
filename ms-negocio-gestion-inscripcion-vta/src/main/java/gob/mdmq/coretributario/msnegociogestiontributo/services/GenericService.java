@@ -20,5 +20,7 @@ public interface GenericService<T> {
 	  Optional<T> findById(Long id) throws ServiceException;
 	  
 	  List<T> findByNumeroRuc(String numeroRuc) throws ServiceException;
+	  
+      List<T> findByAnioObligadoPersonaSociedad(Short anio, String abligado, String personaSociedad) throws ServiceException;
 	 
 }
