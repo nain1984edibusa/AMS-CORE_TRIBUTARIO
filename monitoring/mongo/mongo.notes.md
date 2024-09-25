@@ -30,4 +30,25 @@ db.COR_PARAMETROS.insertOne(
 
 
 db.COR_PARAMETROS.find()
+
+use tutorial
+collection products
+
+db.COR_products.insertOne(
+  {
+    parametroId: 1,  
+    descripcionParametro: 'Materialidad',
+    valorNumerico: 100,
+    valorCaracter: ''
+  }
+)
+
+db.products.insertOne(
+  {
+    parametroId: 1,  
+    descripcionParametro: 'Materialidad',
+    valorNumerico: 100,
+    valorCaracter: ''
+  }
+)
 ```
