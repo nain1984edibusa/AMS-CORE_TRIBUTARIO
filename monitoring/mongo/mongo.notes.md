@@ -45,10 +45,18 @@ db.COR_products.insertOne(
 
 db.products.insertOne(
   {
-    parametroId: 1,  
-    descripcionParametro: 'Materialidad',
-    valorNumerico: 100,
-    valorCaracter: ''
+    id: 1,  
+    name: 'Materialidad',
+    price: 100,
   }
 )
 ```
+
+http://localhost:8092/parametro
+
+http://localhost:8092/parametro
+{
+	"descripcionParametro" : "MATERIALIDAD EXTENSIVOS",
+	"valorNumerico" : 166.57,
+	"valorCaracter" : null
+}
