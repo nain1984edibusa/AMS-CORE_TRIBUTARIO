@@ -7,7 +7,7 @@ spring:
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     show-sql: true
   datasource: 
-    url: jdbc:sqlserver://172.22.16.34;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIB
+    url: jdbc:sqlserver://172.22.16.34;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIBUTARIO
     username: GestionMunicipalCoreTributarioUsuario
     password: Gestion%desa
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
@@ -43,6 +43,7 @@ management:
   endpoints:
     web:
      exposure:
-       include: "*"
+       include: health,prometheus
+       base-path: /actuator/catalago 
      health:
        show-details: always

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2bdb4005-0a33-4f6e-bc6b-9cbce1f68fc6",
+		"_postman_id": "5430314b-56f7-45c5-9428-84e2620e01be",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -548,12 +548,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8888/actuator",
+											"raw": "http://localhost:8887/actuator",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8888",
+											"port": "8887",
 											"path": [
 												"actuator"
 											]
@@ -567,12 +567,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8888/actuator/health",
+											"raw": "http://localhost:8887/actuator/health",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8888",
+											"port": "8887",
 											"path": [
 												"actuator",
 												"health"
