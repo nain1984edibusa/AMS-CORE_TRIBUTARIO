@@ -8,6 +8,13 @@
 Rutas
 * https://www.youtube.com/watch?v=yOlaImDMaG8
 
+## DEPLOY - RENDER
+https://www.youtube.com/watch?v=4X-jLAI6rDg
+
+## DOCKER - SQL-
+https://www.youtube.com/watch?v=Z6d5AhagDwc
+
+
 ## MONITOREO - PROMETHEUS - GRAFANA
 
 https://www.youtube.com/watch?v=vn2Sk52gxCM
