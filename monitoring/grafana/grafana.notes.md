@@ -7,7 +7,7 @@
 
 ## Instalacion - Con Docker (funciono!!)
 ```
-docker run -d --name=grafana -p 3000:3000 grafana/grafana-oss
+docker run -d --name=grafana-dev -p 3000:3000 grafana/grafana-oss
 ```
 * Ingresar: http://localhost:3000/
 * Usuario y clave: admin/admin

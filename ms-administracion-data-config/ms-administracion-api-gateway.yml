@@ -45,19 +45,24 @@ spring:
 #        - Path=/ms-clientes/**
 #        filters:         
 #        - RewritePath=/ms-clientes/(?<path>.*), /$\{path}        
-      - id: albums
-        uri: https://jsonplaceholder.typicode.com/albums
-        predicates:
-        - Path=/albums
+#      - id: albums
+#        uri: https://jsonplaceholder.typicode.com/albums
+#        predicates:
+#        - Path=/albums
         
-# Activacion de endpoints         
+# Endpoints exposition
+# Acuator
 management:
-     endpoints:
-       web:
-         exposure:
-           include: '*'
-     endpoint:
-       gateway:
-          enabled: true
-       health:
-         show-details: always   
+  endpoints:
+    web:
+      exposure:
+        include: "health, prometheus"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true    

@@ -12,20 +12,4 @@ spring:
     config:
       server: 
         native:
-          searchLocations: file:///C:/AmbDesarrollo/AMS-CORE_TRIBUTARIO/ms-administracion-data-config
-
-# Acuator
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "health,refresh, prometheus, beans"
-  health:
-    readinessstate:
-      enabled: true
-    livenessstate:
-      enabled: true
-  endpoint:
-    health:
-      probes:
-        enabled: true   
+          searchLocations: file:///C:/AmbDesarrollo/AMS-CORE_TRIBUTARIO/ms-administracion-data-config  

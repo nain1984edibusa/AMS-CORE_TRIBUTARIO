@@ -48,6 +48,8 @@ dependencies {
   runtimeOnly 'com.mysql:mysql-connector-j'
   annotationProcessor 'org.projectlombok:lombok'
   
+  runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+  
   implementation('org.springframework.cloud:spring-cloud-starter-bootstrap')
    
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
