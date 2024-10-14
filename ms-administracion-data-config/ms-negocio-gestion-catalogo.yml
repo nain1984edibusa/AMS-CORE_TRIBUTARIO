@@ -39,11 +39,18 @@ eureka:
          defaultZone: http://localhost:8889/eureka
          
 # Endpoints exposition
+# Acuator
 management:
   endpoints:
     web:
-     exposure:
-       include: health,prometheus
-       base-path: /actuator/catalago 
-     health:
-       show-details: always
+      exposure:
+        include: "health, prometheus"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true 

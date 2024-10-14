@@ -32,21 +32,60 @@ scrape_configs:
     #static_configs:
     #  - targets: ["localhost:9090"]   
 
+  - job_name: 'ms-administracion-api-gateway'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['172.16.34.196:8887']
+        labels:
+         application: 'ms-administracion-api-gateway'
 
-#  - job_name: 'ms-negocio-gestion-catalogo'
-#    metrics_path: '/actuator/catalogo/prometheus'
-#    static_configs:
-#      - targets: ['192.168.100.4:8887']
-#        labels:
-#         application: 'ms-negocio-gestion-catalogo'
+  - job_name: 'ms-negocio-gestion-contribuyente'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['172.16.34.196:8091']
+        labels:
+         application: 'ms-negocio-gestion-contribuyente'
+
+  - job_name: 'ms-parametrizacion'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['172.16.34.196:8092']
+        labels:
+         application: 'ms-parametrizacion'
+
+  - job_name: 'ms-negocio-gestion-catalogo'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['172.16.34.196:8190']
+        labels:
+         application: 'ms-negocio-gestion-catalogo'
          
-#  - job_name: 'ms-negocio-gestion-inscripcion-vta'
+  - job_name: 'ms-negocio-gestion-inscripcion-vta'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['172.16.34.196:8193']
+        labels:
+         application: 'ms-negocio-gestion-inscripcion-vta'
+         
+  - job_name: 'ms-negocio-gestion-persuasivo-email-inscripcion'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['172.16.34.196:8192']
+        labels:
+         application: 'ms-negocio-gestion-persuasivo-email-inscripcion'
+
+
+
+##################################################################################################################    
+##################################################################################################################    
+
+#  - job_name: 'ms-administracion-api-gateway'
 #    metrics_path: '/actuator/prometheus'
 #    static_configs:
-#      - targets: ['172.16.34.196:8887']
+#      - targets: ['192.168.100.2:8887']
 #        labels:
-#         application: 'ms-negocio-gestion-inscripcion-vta'
-         
+#         application: 'ms-administracion-api-gateway'
+#         
 #  - job_name: 'ms-negocio-gestion-contribuyente'
 #    metrics_path: '/actuator/prometheus'
 #    static_configs:
@@ -60,28 +99,3 @@ scrape_configs:
 #      - targets: ['192.168.100.2:8092']
 #        labels:
 #         application: 'ms-parametrizacion'
-
-
-##################################################################################################################    
-##################################################################################################################    
-
-  - job_name: 'ms-administracion-api-gateway'
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['192.168.100.2:8887']
-        labels:
-         application: 'ms-administracion-api-gateway'
-         
-  - job_name: 'ms-negocio-gestion-contribuyente'
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['192.168.100.2:8091']
-        labels:
-         application: 'ms-negocio-gestion-contribuyente'
-  
-  - job_name: 'ms-parametrizacion'
-    metrics_path: '/actuator/prometheus'
-    static_configs:
-      - targets: ['192.168.100.2:8092']
-        labels:
-         application: 'ms-parametrizacion'

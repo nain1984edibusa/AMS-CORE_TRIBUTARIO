@@ -1,4 +1,4 @@
-package gob.mdmq.coretributario.msnegociogestiontributo;
+package gob.mdmq.coretributario.msparametrizacion;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -11,17 +11,18 @@ import io.micrometer.prometheus.PrometheusMeterRegistry;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class MsNegocioGestionTributoApplication {
+public class MsParametrizacionApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsNegocioGestionTributoApplication.class, args);
+		SpringApplication.run(MsParametrizacionApplication.class, args);
 	}
+
 	@Value("${spring.application.name}")
-	  String appMsNegocioGestionInscripcionVta;
+	  String appMsParametrizacion;
 
 	  @Bean
 	  MeterRegistryCustomizer<PrometheusMeterRegistry> configureMetricsRegistry()
 	  {
-	    return registry -> registry.config().commonTags("application", appMsNegocioGestionInscripcionVta);
-	  }
+	    return registry -> registry.config().commonTags("application", appMsParametrizacion);
+	  }	
 }
