@@ -1,90 +1,32 @@
-#services:
-#  mysql_db1:
-#    image: mysql:8.0.33
-#    container_name: mysql_db1
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: db_ms_contribuyente
-#      MYSQL_USER: uncledave
-#      MYSQL_PASSWORD: Test123
-#    ports:
-#      - 3306:3306  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
-##    volumes:
-##      - mysql_data1:/var/lib/mysql
-#
-#  mysql_db2:
-#    image: mysql:8.0.33
-#    container_name: mysql_db2
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root2
-#      MYSQL_DATABASE: db_ms_cliente
-#      MYSQL_USER: uncledave2
-#      MYSQL_PASSWORD: Test1232
-#    ports:
-#      - 3307:3306  # Mapea el puerto externo 3307 al puerto interno 3306 de mysql_db2
-##    volumes:
-##      - mysql_data2:/var/lib/mysql
-#
-##volumes:
-##  mysql_data1:
-##  mysql_data2:
-#  
-#  
-#
-#
-##
-##services:
-##  ### MySQL database for contribuyente
-##   db-contribuyente-dev:
-##    container_name: db-contribuyente-dev
-##    image: mysql:8.0.33
-##    restart: unless-stopped
-##    environment:
-##      MYSQL_DATABASE: db_ms_contribuyente
-##      MYSQL_USER: uncledave
-##      MYSQL_PASSWORD: Test123
-##      MYSQL_ROOT_PASSWORD: root
-##    ports:
-##      - 3306:3306
-##    expose:
-##      - 3306
-###    command: -p 3306
-##      
-##    ### MySQL database for contribuyente
-##   db-cliente-dev:
-## #   extends: mysql
-##    container_name: db-cliente-dev
-##    image: mysql:8.0.33
-##    restart: unless-stopped
-##    environment:
-##      MYSQL_DATABASE: db_ms_cliente
-##      MYSQL_USER: uncledave
-##      MYSQL_PASSWORD: Test123
-##      MYSQL_ROOT_PASSWORD: root
-##    ports:
-##      - 3307:3306
-##    expose:
-##      - 3306
-##    #command: -p 3310
-##  
-###
-###  ### MySQL database for Orders
-###   db-autenticacion-jwt:
-###    container_name: db-autenticacion-jwt
-###    image: mysql:laste
-###    restart: unless-stopped
-###    environment:
-###      MYSQL_DATABASE: securitydb
-###      MYSQL_USER: uncledave
-###      MYSQL_PASSWORD: Test123
-###      MYSQL_ROOT_PASSWORD: root
-###    ports:
-###      - 3311:3311
-###    expose:
-###      - 3311
-##
-##
-##
-##
-##
-##  
+version: '3.8'
+
+services:
+  db-contribuyente-dev:
+    image: mysql:8.0
+    container_name: db-contribuyente-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_ms_contribuyente
+      MYSQL_USER: uncledave
+      MYSQL_PASSWORD: Test123
+    ports:
+      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
+#    volumes:
+#      - mysql_data1:/var/lib/mysql
+
+  db-cliente-dev:
+    image: mysql:8.0
+    container_name: db-cliente-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_ms_cliente
+      MYSQL_USER: uncledave
+      MYSQL_PASSWORD: Test123
+    ports:
+      - "3309:3306"  # Mapea el puerto externo 3307 al puerto interno 3306 de mysql_db2
+#    volumes:
+#      - mysql_data2:/var/lib/mysql
+
+#volumes:
+#  mysql_data1:
+#  mysql_data2:

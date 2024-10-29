@@ -8,9 +8,9 @@ spring:
       ddl-auto: create
     show-sql: true
   datasource: 
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_ms_clientes?createDatabaseIfNotExist=true&useSSL=true
-    username: root
-    password: 123456
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3308/db_ms_contribuyente?createDatabaseIfNotExist=true&useSSL=true
+    username: uncledave
+    password: Test123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 # Server Admin Client

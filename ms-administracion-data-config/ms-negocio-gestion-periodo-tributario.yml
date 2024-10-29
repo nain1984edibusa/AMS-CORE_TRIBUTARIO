@@ -7,9 +7,9 @@ spring:
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     show-sql: true
   datasource: 
-    url: jdbc:sqlserver://172.22.16.34;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIBUTARIO
-    username: GestionMunicipalCoreTributarioUsuario
-    password: Gestion%desa
+    url: jdbc:sqlserver://localhost;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIBUTARIO
+    username: sa
+    password: Edibus@3130
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 #   <add name="CoreTributarioModel" connectionString=

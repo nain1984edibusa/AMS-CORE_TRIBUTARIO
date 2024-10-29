@@ -1,7 +1,5 @@
-create database db_ms_clientes;
 
-use db_ms_clientes;
-
+use db_ms_contribuyente;
 
 create table tbl_cliente(
     cliente_id int not null auto_increment  primary key,

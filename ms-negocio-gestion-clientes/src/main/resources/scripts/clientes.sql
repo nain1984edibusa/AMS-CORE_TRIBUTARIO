@@ -1,7 +1,4 @@
-create database db_ms_clientes;
-
-use db_ms_clientes;
-
+use db_ms_cliente;
 
 create table tbl_cliente(
     cliente_id int not null auto_increment  primary key,
@@ -12,9 +9,5 @@ create table tbl_cliente(
     correo varchar(60) null,
     estado char(1) default '1' not null 
 );
-
-
-INSERT INTO tbl_cliente(razon_social,ruc,direccion,telefono,correo)
-VALUES('movistar','20544987258','AV. LARCO 237-SAN ISIDRO','456-4574','contacto@claro.com.pe');
 
 
