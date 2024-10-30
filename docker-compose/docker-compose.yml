@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  db-contribuyente-dev:
+    image: mysql:8.0
+    container_name: db-contribuyente-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_ms_contribuyente
+      MYSQL_USER: uncledave
+      MYSQL_PASSWORD: Test123
+    ports:
+      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
+#    volumes:
+#      - mysql_data1:/var/lib/mysql
+
+  db-cliente-dev:
+    image: mysql:8.0
+    container_name: db-cliente-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_ms_cliente
+      MYSQL_USER: uncledave
+      MYSQL_PASSWORD: Test123
+    ports:
+      - "3309:3306"  # Mapea el puerto externo 3307 al puerto interno 3306 de mysql_db2
+#    volumes:
+#      - mysql_data2:/var/lib/mysql
+
+#volumes:
+#  mysql_data1:
+#  mysql_data2:
+
+
+  mongo:
+    image: mongo:6.0.4
+    restart: unless-stopped
+    container_name: debbuggeandoIdeas-mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 'root'
+      MONGO_INITDB_ROOT_PASSWORD: 'secret'
+      MONGO_INITDB_DATABASE: users
+    volumes:
+      - ./mongo/init/init-script.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./mongo/data:/data/db
+      - ./mongo/data/log:/var/log/mongodb/
+    ports:
+      - "27017:27017"
+
+#  mongo-express:
+#    image: mongo-express:1.0.0-alpha
+#    restart: unless-stopped
+#    container_name: debbuggeandoIdeas-expresMongo
+#    environment:
+#      ME_CONFIG_MONGODB_SERVER: 'mongo'
+#      ME_CONFIG_MONGODB_ADMINUSERNAME: 'root'
+#      ME_CONFIG_MONGODB_ADMINPASSWORD: 'secret'
+#      ME_CONFIG_MONGODB_PORT: '27017'
+#      ME_CONFIG_BASICAUTH_USERNAME: 'sa'
+#      ME_CONFIG_BASICAUTH_PASSWORD: 'sa'
+#    links:
+#      - mongo    
+#    ports:
+#      - "8180:8180"
