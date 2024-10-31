@@ -1,4 +1,4 @@
-version: '3.8'
+#version: '3.8'
 
 services:
   db-contribuyente-dev:
@@ -32,21 +32,21 @@ services:
 #  mysql_data2:
 
 
-  mongo:
-    image: mongo:6.0.4
-    restart: unless-stopped
-    container_name: debbuggeandoIdeas-mongo
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: 'root'
-      MONGO_INITDB_ROOT_PASSWORD: 'secret'
-      MONGO_INITDB_DATABASE: users
-    volumes:
-      - ./mongo/init/init-script.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
-      - ./mongo/data:/data/db
-      - ./mongo/data/log:/var/log/mongodb/
-    ports:
-      - "27017:27017"
-
+#  mongo:
+#    image: mongo:6.0.4
+#    restart: unless-stopped
+#    container_name: debbuggeandoIdeas-mongo
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: 'root'
+#      MONGO_INITDB_ROOT_PASSWORD: 'secret'
+#      MONGO_INITDB_DATABASE: users
+#    volumes:
+#      - ./init/init-script.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+#      - ./data:/data/db
+#      - ./data/log:/var/log/mongodb/
+#    ports:
+#      - "27017:27017"
+#
 #  mongo-express:
 #    image: mongo-express:1.0.0-alpha
 #    restart: unless-stopped
@@ -61,4 +61,4 @@ services:
 #    links:
 #      - mongo    
 #    ports:
-#      - "8180:8180"
+#      - "8081:8081"

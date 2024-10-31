@@ -2,6 +2,8 @@
 ## Referencias
 
 * https://www.tutorialesprogramacionya.com/mongodbya/detalleconcepto.php?punto=3&codigo=3&inicio=0
+https://github.com/alejandrocalderonhernandez/docker-compose-img/tree/master/mongodb/data
+https://www.youtube.com/watch?v=iVEt-iB8KXk
 
 ## Imagen - Con Docker
 ```
@@ -17,7 +19,7 @@ docker run --name mongo-dev -p 27017:27017 -d mongodb/mongodb-community-server:l
 ```
 docker exec -it mongo-dev mongosh
 ```
-use MDMQ_CORE_TRIBUTARIO
+use db_parametro_dev
 ```
 db.COR_PARAMETROS.insertOne(
   {
