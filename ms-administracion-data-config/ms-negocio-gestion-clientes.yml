@@ -1,5 +1,6 @@
 server:
-   port: 8092
+#   port: 8092
+   port: 0
    
 # MySql #
 spring:
@@ -7,11 +8,12 @@ spring:
     hibernate: 
       ddl-auto: create
     show-sql: true
+    dialect: org.hibernate.dialect.MySQLDialect
   datasource: 
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3309/db_ms_cliente?createDatabaseIfNotExist=true&useSSL=true
     username: uncledave
     password: Test123
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 
     
 # Server Admin Client
@@ -28,7 +30,9 @@ eureka:
       fetch-registry: true
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
-         
+   instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
+           
 # Endpoints exposition
 management:
   endpoints:
