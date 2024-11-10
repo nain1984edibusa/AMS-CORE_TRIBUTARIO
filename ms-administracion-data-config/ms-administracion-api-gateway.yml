@@ -7,9 +7,7 @@ eureka:
       fetch-registry: true
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
-   instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
-           
+         
 spring:
    # Server Admin Client
   boot:
@@ -22,28 +20,35 @@ spring:
  # Mapeo de Microservicios
   cloud:
     gateway:
+      discovery.locator:          
+          enabled: true           
+          lowerCaseServiceId: true
+
+# Automatico - Routers
+#      routes:
+#      - id: id-ms-instructor
+#        uri: lb://MS-GESTION-INSTRUCTOR
+#        predicates:
+#        - Path=/ms-instructor/**
+#        filters:         
+#        - RewritePath=/ms-instructor/(?<path>.*), /$\{path}        
+#      - id: albums
+#        uri: https://jsonplaceholder.typicode.com/albums
+#        predicates:
+#        - Path=/albums
+
+# Personalizado - Routers
       routes:
-      - id: id-ms-catalogo
-        uri: lb://MS-NEGOCIO-GESTION-CATALOGO
-        predicates:
-        - Path=/api/v2/tipo-plan/**
+#      - id: id-ms-clientes
+#        uri: lb://MS-NEGOCIO-GESTION-CLIENTES
+#        predicates:
+#        - Path=/ms-clientes/**
 #        filters:         
 #        - RewritePath=/ms-clientes/(?<path>.*), /$\{path}        
-      - id: albums
-        uri: https://jsonplaceholder.typicode.com/albums
-        predicates:
-        - Path=/albums1/**
-        
-        
-#        spring:
-#  cloud:
-#    gateway:
-#      routes:
-#      - id: path_route
-#        uri: https://example.org
+#      - id: albums
+#        uri: https://jsonplaceholder.typicode.com/albums
 #        predicates:
-#        - Path=/red/{segment},/blue/{segment}
-        
+#        - Path=/albums
         
 # Endpoints exposition
 # Acuator
@@ -60,4 +65,11 @@ management:
   endpoint:
     health:
       probes:
-        enabled: true    
+        enabled: true 
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
+         

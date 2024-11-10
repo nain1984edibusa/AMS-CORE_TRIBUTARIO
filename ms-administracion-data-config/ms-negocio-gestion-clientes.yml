@@ -1,28 +1,25 @@
 server:
-#   port: 8092
-   port: 0
+   port: 8092
    
 # MySql #
 spring:
   jpa: 
     hibernate: 
       ddl-auto: create
-    show-sql: true
-    dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true  
   datasource: 
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3309/db_ms_cliente?createDatabaseIfNotExist=true&useSSL=true
     username: uncledave
     password: Test123
-#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
-    
 # Server Admin Client
   boot:
     admin:
       client:
         url: http://localhost:8890
         instance:
-          management-base-url: http://localhost:${server.port}
+          management-base-url: http://localhost:8091
           
 # Server Registry Client
 eureka:
@@ -30,14 +27,29 @@ eureka:
       fetch-registry: true
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
-   instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
-           
+#   instance:
+#      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}   
+      
 # Endpoints exposition
+# Acuator
 management:
   endpoints:
     web:
-     exposure:
-       include: "*"
-     health:
-       show-details: always
+      exposure:
+        include: "health, prometheus"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true 
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
+         

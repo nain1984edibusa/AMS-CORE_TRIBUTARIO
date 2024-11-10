@@ -62,3 +62,11 @@ services:
 #      - mongo    
 #    ports:
 #      - "8081:8081"
+
+
+  ### Zipkin
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin:3.4.2
+    ports:
+      - "9411:9411"

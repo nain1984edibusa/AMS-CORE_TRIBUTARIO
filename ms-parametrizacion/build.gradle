@@ -49,7 +49,12 @@ dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
   annotationProcessor 'org.projectlombok:lombok'
   
-  runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+   //HEALT CHECK para funcionar en postman   
+   implementation 'org.springframework.boot:spring-boot-starter-actuator'
+   implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+   implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+   runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+   
   implementation('org.springframework.cloud:spring-cloud-starter-bootstrap')
    
   testImplementation 'org.springframework.boot:spring-boot-starter-test'

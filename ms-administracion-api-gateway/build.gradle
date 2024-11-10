@@ -34,11 +34,12 @@ dependencies {
     implementation 'de.codecentric:spring-boot-admin-starter-client'
     
     //HEALT CHECK para funcionar en postman
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    
+	   
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-      
-     runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+      implementation 'io.micrometer:micrometer-tracing-bridge-brave'
+      implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
+      runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
       
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
