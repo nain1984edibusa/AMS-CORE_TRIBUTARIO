@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5430314b-56f7-45c5-9428-84e2620e01be",
+		"_postman_id": "812e0495-5bb5-46a4-955c-607b91ed90a2",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -1189,12 +1189,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8092/api/v1/parametro",
+									"raw": "http://localhost:8290/api/v1/parametro",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8092",
+									"port": "8290",
 									"path": [
 										"api",
 										"v1",
@@ -1225,17 +1225,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8092/api/v1/parametro/45",
+									"raw": "http://localhost:8290/api/v1/parametro/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8092",
+									"port": "8290",
 									"path": [
 										"api",
 										"v1",
 										"parametro",
-										"45"
+										"1"
 									]
 								}
 							},
