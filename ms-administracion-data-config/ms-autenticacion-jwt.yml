@@ -6,12 +6,12 @@ spring:
   jpa: 
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate: 
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
   datasource: 
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/securitydb?createDatabaseIfNotExist=true&useSSL=true
-    username: root
-    password: 123456
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_security?createDatabaseIfNotExist=true&useSSL=true
+    username: uncledave
+    password: Test123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 # Server Admin Client
@@ -28,7 +28,9 @@ eureka:
       fetch-registry: true
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
-         
+   instance:
+      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}  
+            
 # Endpoints exposition
 management:
   endpoints:

@@ -1,32 +1,45 @@
 #version: '3.8'
 
 services:
-  db-contribuyente-dev:
-    image: mysql:8.0
-    container_name: db-contribuyente-dev
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: db_ms_contribuyente
-      MYSQL_USER: uncledave
-      MYSQL_PASSWORD: Test123
-    ports:
-      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
+#  db-contribuyente-dev:
+#    image: mysql:8.0
+#    container_name: db-contribuyente-dev
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: db_ms_contribuyente
+#      MYSQL_USER: uncledave
+#      MYSQL_PASSWORD: Test123
+#    ports:
+#      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
 #    volumes:
 #      - mysql_data1:/var/lib/mysql
 
-  db-cliente-dev:
-    image: mysql:8.0
-    container_name: db-cliente-dev
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: db_ms_cliente
-      MYSQL_USER: uncledave
-      MYSQL_PASSWORD: Test123
-    ports:
-      - "3309:3306"  # Mapea el puerto externo 3307 al puerto interno 3306 de mysql_db2
+#  db-cliente-dev:
+#    image: mysql:8.0
+#    container_name: db-cliente-dev
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: db_ms_cliente
+#      MYSQL_USER: uncledave
+#      MYSQL_PASSWORD: Test123
+#    ports:
+#      - "3309:3306"  # Mapea el puerto externo 3307 al puerto interno 3306 de mysql_db2
 #    volumes:
 #      - mysql_data2:/var/lib/mysql
 
+
+#  db-security-dev:
+#    image: mysql:8.0
+#    container_name: db_security-dev
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: db_security
+#      MYSQL_USER: uncledave
+#      MYSQL_PASSWORD: Test123
+#    ports:
+#      - "3306:3306"  # Mapea el puerto externo 3307 al puerto interno 3306 de mysql_db2
+#    volumes:
+#      - mysql_data2:/var/lib/mysql
 #volumes:
 #  mysql_data1:
 #  mysql_data2:
@@ -65,11 +78,11 @@ services:
 
 
   ### Zipkin
-#  zipkin:
-#    container_name: zipkin-dev
-#    image: openzipkin/zipkin:3.4.2
-#    ports:
-#      - "9411:9411"
+  zipkin:
+    container_name: zipkin-dev
+    image: openzipkin/zipkin:3.4.2
+    ports:
+      - "9411:9411"
  
  ### Prometheus
 #  prometheus:

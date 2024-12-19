@@ -53,3 +53,6 @@ https://grafana.com/grafana/dashboards/6756
 ```
 * En el Dashboard, usar como instance: 192.168.1.73:8080 y como Application: demoapp
 
+
+
+

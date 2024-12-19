@@ -37,7 +37,8 @@ eureka:
       fetch-registry: true
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
-         
+   instance:
+      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}       
 # Endpoints exposition
 # Acuator
 management:
