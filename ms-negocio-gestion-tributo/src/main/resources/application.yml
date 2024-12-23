@@ -1,21 +1,15 @@
+server:
+   port: 9999
+   
+# SQL -Server #
 spring:
-  application:
-    name: ms-negocio-gestion-tributo
-
-  config:
-    import: optional:configserver:http://localhost:8888
-    
-    
-#server:
-#   port: 8089
-# MySql #
-# spring.jpa.hibernate.ddl-auto=update
-#spring:
-#  datasource: 
-#    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_ms_clientes
-#    username: root
-#    password: 123456
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#spring.jpa.show-sql: true
+  jpa: 
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: true
+  datasource: 
+    url: jdbc:sqlserver://172.22.16.34;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIBUTARIO
+    username: GestionMunicipalCoreTributarioUsuario
+    password: Gestion%desa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 

@@ -64,7 +64,7 @@ Crear el build del proyecto
 gradle clean build
 
 Ejecutar el jar
-java -jar ms-administracion-server-registry-0.0.1-SNAPSHOT.jar
+java -jar ms-gestion-tributo-0.0.1-SNAPSHOT.jar
 
 
 docker build -t ms-administracion-server-registry .
@@ -79,5 +79,5 @@ java -jar ms-administracion-server-config-0.0.1-SNAPSHOT.jar
 
 
 docker build -t ms-administracion-server-config .
-docker run -p 8888:8888 ms-administracion-server-config
+docker run -p --name ms-negocio-gestion-tributo-dev 9999:9999 ms-negocio-gestion-tributo
 
