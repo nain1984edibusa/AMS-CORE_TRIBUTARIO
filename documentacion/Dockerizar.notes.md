@@ -79,5 +79,5 @@ java -jar ms-administracion-server-config-0.0.1-SNAPSHOT.jar
 
 
 docker build -t ms-administracion-server-config .
-docker run -p --name ms-negocio-gestion-tributo-dev 9999:9999 ms-negocio-gestion-tributo
+docker run --ms-negocio-gestion-tributo-depoly -p 9991:9999 ms-negocio-gestion-tributo
 

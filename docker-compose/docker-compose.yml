@@ -1,16 +1,16 @@
 #version: '3.8'
 
 services:
-#  db-contribuyente-dev:
-#    image: mysql:8.0
-#    container_name: db-contribuyente-dev
-#    environment:
-#      MYSQL_ROOT_PASSWORD: root
-#      MYSQL_DATABASE: db_ms_contribuyente
-#      MYSQL_USER: uncledave
-#      MYSQL_PASSWORD: Test123
-#    ports:
-#      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
+  db-contribuyente-dev:
+    image: mysql:8.0
+    container_name: db-contribuyente-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db_ms_contribuyente
+      MYSQL_USER: uncledave
+      MYSQL_PASSWORD: Test123
+    ports:
+      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
 #    volumes:
 #     - mysql_data1:/var/lib/mysql
 
