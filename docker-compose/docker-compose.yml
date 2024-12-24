@@ -1,16 +1,16 @@
 #version: '3.8'
 
 services:
-  db-contribuyente-dev:
-    image: mysql:8.0
-    container_name: db-contribuyente-dev
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: db_ms_contribuyente
-      MYSQL_USER: uncledave
-      MYSQL_PASSWORD: Test123
-    ports:
-      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
+#  db-contribuyente-dev:
+#    image: mysql:8.0
+#    container_name: db-contribuyente-dev
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: db_ms_contribuyente
+#      MYSQL_USER: uncledave
+#      MYSQL_PASSWORD: Test123
+#    ports:
+#      - "3308:3306"  # Mapea el puerto externo 3306 al puerto interno 3306 de mysql_db1
 #    volumes:
 #     - mysql_data1:/var/lib/mysql
 
@@ -83,12 +83,12 @@ services:
 #   image: openzipkin/zipkin:3.4.2
 #   ports:
 #     - "9411:9411"
- 
+
  ### Prometheus
   prometheus:
     container_name: prometheus-dev
     image: prom/prometheus:v2.53.0
     ports:
       - "9090:9090"
-#    volumes:
-#      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    volumes:
+      - ./monitoring/config/prometheus.yml:/etc/prometheus/prometheus.yml

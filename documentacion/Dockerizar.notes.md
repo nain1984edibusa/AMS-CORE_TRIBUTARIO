@@ -79,5 +79,24 @@ java -jar ms-administracion-server-config-0.0.1-SNAPSHOT.jar
 
 
 docker build -t ms-administracion-server-config .
-docker run --ms-negocio-gestion-tributo-depoly -p 9991:9999 ms-negocio-gestion-tributo
+docker run --name ms-administracion-server-config-depoly -p 8888:8888 ms-administracion-server-config
+
+docker build -t ms-administracion-server-registry .
+docker run --name ms-administracion-server-registry-deploy -p 8889:8889 ms-administracion-server-registry
+
+
+docker build -t ms-negocio-gestion-inscripcion-vta_v2 .
+docker run --name ms-negocio-gestion-inscripcion-vta_v2-deploy -p 8193:8193 ms-negocio-gestion-inscripcion-vta_v2
+
+ms-negocio-gestion-inscripcion-vta_v2
+
+
+
+FROM openjdk
+ADD build/libs/ms-negocio-gestion-tributo*.jar ms-negocio-gestion-tributo-0.0.1.jar
+EXPOSE 8889
+ENTRYPOINT ["java","-jar","ms-negocio-gestion-tributo-0.0.1.jar"]
+
+docker build -t ms-negocio-gestion-tributo .
+docker run --name ms-negocio-gestion-tributo-deploy -p 9999:9999 ms-negocio-gestion-tributo
 
