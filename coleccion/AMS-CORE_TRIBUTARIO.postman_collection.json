@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "812e0495-5bb5-46a4-955c-607b91ed90a2",
+		"_postman_id": "f61ff686-0dfe-4573-b541-db0f4fee75f8",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -39,52 +39,17 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8091/api/v1/contribuyente/3",
+									"raw": "http://localhost:8085/api/v1/contribuyente/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8091",
+									"port": "8085",
 									"path": [
 										"api",
 										"v1",
 										"contribuyente",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "findByRazonSocial",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n   \"razonSocial\": \"movistar\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8091/api/v1/contribuyente/by-razonSocial/twenty",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8091",
-									"path": [
-										"api",
-										"v1",
-										"contribuyente",
-										"by-razonSocial",
-										"twenty"
+										"1"
 									]
 								}
 							},
@@ -101,12 +66,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8191/api/v1/tributo",
+									"raw": "http://localhost:8090/api/v1/tributo",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8191",
+									"port": "8090",
 									"path": [
 										"api",
 										"v1",
@@ -197,12 +162,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8192/api/v1/email-inscripcion",
+									"raw": "http://localhost:8085/api/v1/email-inscripcion",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8192",
+									"port": "8085",
 									"path": [
 										"api",
 										"v1",
@@ -218,66 +183,16 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8192/api/v1/email-inscripcion/by-numeroRuc/1756235618001",
+									"raw": "http://localhost:8085/api/v1/email-inscripcion/1756235618001",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8192",
+									"port": "8085",
 									"path": [
 										"api",
 										"v1",
 										"email-inscripcion",
-										"by-numeroRuc",
-										"1756235618001"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "ms-negocio-gestion-inscripcion-vta",
-					"item": [
-						{
-							"name": "findAll",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8193/api/v1/inscripcion-vta",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8193",
-									"path": [
-										"api",
-										"v1",
-										"inscripcion-vta"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "findByNumeroRuc",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8193/api/v1/inscripcion-vta/by-numeroRuc/1756235618001",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8193",
-									"path": [
-										"api",
-										"v1",
-										"inscripcion-vta",
-										"by-numeroRuc",
 										"1756235618001"
 									]
 								}
@@ -298,12 +213,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/parametro",
+											"raw": "http://localhost:8081/api/v1/parametro",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -319,12 +234,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/parametro/45",
+											"raw": "http://localhost:8081/api/v1/parametro/45",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -346,12 +261,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tipo-plan",
+											"raw": "http://localhost:8081/api/v1/tipo-plan",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -367,12 +282,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tipo-plan/2",
+											"raw": "http://localhost:8081/api/v1/tipo-plan/2",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -394,12 +309,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tributo",
+											"raw": "http://localhost:8081/api/v1/tributo",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -415,12 +330,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tributo/2",
+											"raw": "http://localhost:8081/api/v1/tributo/2",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -442,12 +357,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tipo-contribuyente",
+											"raw": "http://localhost:8081/api/v1/tipo-contribuyente",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -463,12 +378,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tipo-contribuyente/2",
+											"raw": "http://localhost:8081/api/v1/tipo-contribuyente/2",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8190",
+											"port": "8081",
 											"path": [
 												"api",
 												"v1",
@@ -548,12 +463,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8887/actuator",
+											"raw": "http://localhost:8888/actuator",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8887",
+											"port": "8888",
 											"path": [
 												"actuator"
 											]
@@ -567,12 +482,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8887/actuator/health",
+											"raw": "http://localhost:8888/actuator/health",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8887",
+											"port": "8888",
 											"path": [
 												"actuator",
 												"health"
@@ -607,15 +522,6 @@
 						{
 							"name": "microservices",
 							"item": [
-								{
-									"name": "catalogo",
-									"item": [
-										{
-											"name": "parametro",
-											"item": []
-										}
-									]
-								},
 								{
 									"name": "ms-negocio-gestion-contribuyente",
 									"request": {
@@ -670,26 +576,6 @@
 											"port": "8888",
 											"path": [
 												"ms-administracion-api-gateway",
-												"default"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "ms-negocio-gestion-catalogo",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "http://localhost:8888/ms-negocio-gestion-catalogo/default",
-											"protocol": "http",
-											"host": [
-												"localhost"
-											],
-											"port": "8888",
-											"path": [
-												"ms-negocio-gestion-catalogo",
 												"default"
 											]
 										}
@@ -823,7 +709,12 @@
 												}
 											},
 											"response": []
-										},
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-inscripcion-vta",
+									"item": [
 										{
 											"name": "inscripcion-vta-api-gateway",
 											"request": {
@@ -845,38 +736,19 @@
 												}
 											},
 											"response": []
-										},
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-inscripcion-vta_v2",
+									"item": [
 										{
-											"name": "persuasivo-email-inscripcion-numeroRuc-api-gateway-",
+											"name": "inscripcion-vta-api-gateway",
 											"request": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "http://localhost:8887/ms-negocio-gestion-persuasivo-email-inscripcion/api/v1/email-inscripcion/by-numeroRuc/0101449601001",
-													"protocol": "http",
-													"host": [
-														"localhost"
-													],
-													"port": "8887",
-													"path": [
-														"ms-negocio-gestion-persuasivo-email-inscripcion",
-														"api",
-														"v1",
-														"email-inscripcion",
-														"by-numeroRuc",
-														"0101449601001"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "inscripcion-vta-numeroRuc-api-gateway",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta/by-numeroRuc/1721965182001",
+													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta",
 													"protocol": "http",
 													"host": [
 														"localhost"
@@ -886,35 +758,7 @@
 														"ms-negocio-gestion-inscripcion-vta",
 														"api",
 														"v1",
-														"inscripcion-vta",
-														"by-numeroRuc",
-														"1721965182001"
-													]
-												}
-											},
-											"response": []
-										},
-										{
-											"name": "inscripcion-vta-anio-api-gateway",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta/by-anio-obligado-personaSociedad/2022/N/PNL",
-													"protocol": "http",
-													"host": [
-														"localhost"
-													],
-													"port": "8887",
-													"path": [
-														"ms-negocio-gestion-inscripcion-vta",
-														"api",
-														"v1",
-														"inscripcion-vta",
-														"by-anio-obligado-personaSociedad",
-														"2022",
-														"N",
-														"PNL"
+														"inscripcion-vta"
 													]
 												}
 											},
@@ -926,57 +770,20 @@
 									"name": "ms-autenticacion-server-security",
 									"item": [
 										{
-											"name": "ms-autenticacion-server",
+											"name": "auth",
 											"request": {
 												"method": "POST",
 												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n    \"username\": \"eduardo.bustillos@quito.gob.ec\",\r\n    \"password\": \"123456\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
 												"url": {
-													"raw": "http://localhost:8080/ms-autenticacion-jwt/auth/login",
+													"raw": "http://localhost:8080/auth/login",
 													"protocol": "http",
 													"host": [
 														"localhost"
 													],
 													"port": "8080",
 													"path": [
-														"ms-autenticacion-jwt",
 														"auth",
 														"login"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "ms-parametrizacion",
-									"item": [
-										{
-											"name": "parametro-api-gateway",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro",
-													"protocol": "http",
-													"host": [
-														"localhost"
-													],
-													"port": "8887",
-													"path": [
-														"ms-parametrizacion",
-														"api",
-														"v1",
-														"parametro"
 													]
 												}
 											},
@@ -1098,16 +905,34 @@
 			"name": "autorizacion",
 			"item": [
 				{
-					"name": "ms-authetication-jwt",
+					"name": "ms-administracion-server-security-jwt",
 					"item": [
 						{
-							"name": "register",
+							"name": "autho",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
 							"request": {
-								"method": "POST",
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "santiago",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"eduardo.bustillos@quito.gob.ec\",\r\n    \"password\": \"123456\",\r\n    \"lastname\": \"Bustillos\",\r\n    \"firstname\": \"Eduardo\",\r\n    \"country\": \"Ecuador\"\r\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1115,7 +940,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/auth/register",
+									"raw": "http://localhost:8080/auth/hello",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1123,53 +948,14 @@
 									"port": "8080",
 									"path": [
 										"auth",
-										"register"
+										"hello"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "login",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"eduardo.bustillos@quito.gob.ec\",\r\n    \"password\": \"123456\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/auth/login",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"auth",
-										"login"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "parametrizacion",
-			"item": [
-				{
-					"name": "ms-parametrizacion",
-					"item": [
-						{
-							"name": "findAll",
+							"name": "autho-security",
 							"request": {
 								"auth": {
 									"type": "basic",
@@ -1189,30 +975,29 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8290/api/v1/parametro",
+									"raw": "http://localhost:8080/auth/hello-security",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8290",
+									"port": "8080",
 									"path": [
-										"api",
-										"v1",
-										"parametro"
+										"auth",
+										"hello-security"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "findById",
+							"name": "ms-autenticacion-server",
 							"request": {
 								"auth": {
 									"type": "basic",
 									"basic": [
 										{
 											"key": "username",
-											"value": "anyi",
+											"value": "ANYI",
 											"type": "string"
 										},
 										{
@@ -1225,62 +1010,15 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8290/api/v1/parametro/1",
+									"raw": "http://localhost:8080/auth/get",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8290",
+									"port": "8080",
 									"path": [
-										"api",
-										"v1",
-										"parametro",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "save",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "username",
-											"value": "andrea",
-											"type": "string"
-										},
-										{
-											"key": "password",
-											"value": "1234",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n\t\t\"descripcionParametro\" : \"NUMERO INTENTOS PERSUASIVOS\",\r\n\t\t\"valorNumerico\" : null,\r\n\t\t\"valorCaracter\" : \"2\"\r\n\t}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8092/api/v1/parametro",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8092",
-									"path": [
-										"api",
-										"v1",
-										"parametro"
+										"auth",
+										"get"
 									]
 								}
 							},
