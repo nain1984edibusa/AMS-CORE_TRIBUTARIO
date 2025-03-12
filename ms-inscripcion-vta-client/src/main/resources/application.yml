@@ -51,8 +51,8 @@ spring:
     password: Edibus@3130
    
 logging:
-  file:
-    name: logs/application.log
+#  file:
+#    name: logs/application.log
   level:
     root: INFO
     io:

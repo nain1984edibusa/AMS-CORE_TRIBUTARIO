@@ -9,6 +9,8 @@
 Rutas
 * https://www.youtube.com/watch?v=yOlaImDMaG8
 
+
+
 ## DEPLOY - RENDER
 https://www.youtube.com/watch?v=4X-jLAI6rDg
 
@@ -78,15 +80,20 @@ Ejecutar el jar
 java -jar ms-administracion-server-config-0.0.1-SNAPSHOT.jar
 
 
-docker build -t ms-administracion-server-config .
-docker run --name ms-administracion-server-config-depoly -p 8888:8888 ms-administracion-server-config
+#docker build -t ms-administracion-server-config .
+#docker run --name ms-administracion-server-config-depoly -p 8761:8761 ms-administracion-server-config
 
 docker build -t ms-administracion-server-registry .
-docker run --name ms-administracion-server-registry-deploy -p 8889:8889 ms-administracion-server-registry
+docker run --name ms-server-registry -p 8761:8761 ms-administracion-server-registry
+
+ms-administracion-api-gateway
+docker build -t ms-administracion-api-gateway .
+docker run --name ms-api-gateway -p 8080:8080 ms-administracion-api-gateway
 
 
-docker build -t ms-negocio-gestion-inscripcion-vta_v2 .
-docker run --name ms-negocio-gestion-inscripcion-vta_v2-deploy -p 8193:8193 ms-negocio-gestion-inscripcion-vta_v2
+docker build -t ms-negocio-gestion-inscripcion-vta .
+docker run --name ms-inscripcion-vta -p 8193:8193 ms-negocio-gestion-inscripcion-vta
+docker run --name ms-inscripcion-vta -p ms-negocio-gestion-inscripcion-vta
 
 ms-negocio-gestion-inscripcion-vta_v2
 
@@ -99,4 +106,30 @@ ENTRYPOINT ["java","-jar","ms-negocio-gestion-tributo-0.0.1.jar"]
 
 docker build -t ms-negocio-gestion-tributo .
 docker run --name ms-negocio-gestion-tributo-deploy -p 9999:9999 ms-negocio-gestion-tributo
+
+
+## JMETER MICROSERVICIOS 
+ jmeter -n -t [jmx file] -l [results file] -e -o [Path to web report folder]
+
+ jmeter -n -t C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMicroservicios\microservicios.jmx -l C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMicroservicios\origendato_500.csv -e -o C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMicroservicios\reportHtml_500
+ 
+ jmeter -n -t C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMicroservicios\microservicios.jmx -l C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMicroservicios\origendato_250_2inst.csv -e -o C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMicroservicios\reportHtml_250_2inst
+ 
+## JMETER MONOLITO 
+jmeter -n -t C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMonolitico\monolito.jmx -l C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMonolitico\origendato_1000.csv -e -o C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMonolitico\reportHtml_1000
+
+jmeter -n -t C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMonolitico\monolito.jmx -l C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMonolitico\origendato_100_2inst.csv -e -o C:\Users\ebustillos\Desktop\JMeter\Testing\TestArqMonolitico\reportHtml_100_2inst
+ 
+
+
+
+## TESTING MICROSERVICIOS 
+https://piotrminkowski-wordpress-com.translate.goog/2018/05/04/reactive-microservices-with-spring-webflux-and-spring-cloud/?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es-419&_x_tr_pto=sc
+
+## CIRCUIT BRAEK 
+
+https://www.youtube.com/watch?v=LyUiWz0kHWM
+
+
+
 
