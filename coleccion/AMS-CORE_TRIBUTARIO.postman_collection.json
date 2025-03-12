@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "f61ff686-0dfe-4573-b541-db0f4fee75f8",
+		"_postman_id": "0b81859b-384e-4137-91ff-0cc94ed34096",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -66,12 +66,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8090/api/v1/tributo",
+									"raw": "http://localhost:8190/api/v1/tributo",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8090",
+									"port": "8190",
 									"path": [
 										"api",
 										"v1",
@@ -87,12 +87,12 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8090/api/v1/tributo/1",
+									"raw": "http://localhost:8190/api/v1/tributo/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8090",
+									"port": "8190",
 									"path": [
 										"api",
 										"v1",
@@ -213,12 +213,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/parametro",
+											"raw": "http://localhost:8190/api/v1/parametro",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -234,12 +234,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/parametro/45",
+											"raw": "http://localhost:8190/api/v1/parametro/45",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -261,12 +261,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tipo-plan",
+											"raw": "http://localhost:8190/api/v1/tipo-plan",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -282,12 +282,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tipo-plan/2",
+											"raw": "http://localhost:8190/api/v1/tipo-plan/2",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -309,12 +309,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tributo",
+											"raw": "http://localhost:8190/api/v1/tributo",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -330,12 +330,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tributo/2",
+											"raw": "http://localhost:8190/api/v1/tributo/2",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -357,12 +357,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tipo-contribuyente",
+											"raw": "http://localhost:8190/api/v1/tipo-contribuyente",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -378,12 +378,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tipo-contribuyente/2",
+											"raw": "http://localhost:8190/api/v1/tipo-contribuyente/2",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -405,12 +405,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tipo-proceso",
+											"raw": "http://localhost:8190/api/v1/tipo-proceso",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -426,12 +426,12 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8081/api/v1/tipo-proceso/3",
+											"raw": "http://localhost:8190/api/v1/tipo-proceso/3",
 											"protocol": "http",
 											"host": [
 												"localhost"
 											],
-											"port": "8081",
+											"port": "8190",
 											"path": [
 												"api",
 												"v1",
@@ -732,6 +732,25 @@
 														"api",
 														"v1",
 														"inscripcion-vta"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "obtener-inscripcion",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:9995/obtener-inscripcion",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "9995",
+													"path": [
+														"obtener-inscripcion"
 													]
 												}
 											},

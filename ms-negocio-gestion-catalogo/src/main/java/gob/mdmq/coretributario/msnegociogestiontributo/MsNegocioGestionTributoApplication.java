@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 
-//import io.micrometer.prometheus.PrometheusMeterRegistry;
 
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -16,16 +15,4 @@ public class MsNegocioGestionTributoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MsNegocioGestionTributoApplication.class, args);
 	}
-
-//	@Value("${spring.application.name}")
-//	String appMsNegocioCatalogo;
-//	@Value("${spring.profiles.active}")
-//    String activeProfile;
-//
-//	
-//	  @Bean
-//	  MeterRegistryCustomizer<PrometheusMeterRegistry> configureMetricsRegistry()
-//	  {
-//	    return registry -> registry.config().commonTags("application", appMsNegocioCatalogo,  "env", activeProfile);
-//	  }
 }

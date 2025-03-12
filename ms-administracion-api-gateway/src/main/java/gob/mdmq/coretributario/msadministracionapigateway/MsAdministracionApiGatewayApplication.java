@@ -19,13 +19,4 @@ public class MsAdministracionApiGatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MsAdministracionApiGatewayApplication.class, args);
 	}
-
-	@Value("${spring.application.name}")
-	  String appMsAdministracionApiGateway;
-
-	  @Bean
-	  MeterRegistryCustomizer<PrometheusMeterRegistry> configureMetricsRegistry()
-	  {
-	    return registry -> registry.config().commonTags("application", appMsAdministracionApiGateway);
-	  }
 }
