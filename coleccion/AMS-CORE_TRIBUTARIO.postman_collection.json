@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0b81859b-384e-4137-91ff-0cc94ed34096",
+		"_postman_id": "1eb95e1f-2bf0-4edc-9040-f6d0f046afab",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -98,6 +98,30 @@
 										"v1",
 										"tributo",
 										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-inscripcion-vta-client",
+					"item": [
+						{
+							"name": "obtener-inscripcion",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9995/obtener-inscripcion",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9995",
+									"path": [
+										"obtener-inscripcion"
 									]
 								}
 							},
@@ -803,6 +827,31 @@
 													"path": [
 														"auth",
 														"login"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ms-inscripcion-vta-client",
+									"item": [
+										{
+											"name": "ms-inscripcion-vta-client",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-inscripcion-vta-client/obtener-inscripcion",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-inscripcion-vta-client",
+														"obtener-inscripcion"
 													]
 												}
 											},

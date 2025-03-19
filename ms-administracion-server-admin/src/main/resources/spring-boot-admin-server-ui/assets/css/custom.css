@@ -1,0 +1,16 @@
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el texto */
+}
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Opcional para hacer el logo circular */
+}
+
+.brand-text {
+    font-weight: bold;
+    color: #ffffff;
+}

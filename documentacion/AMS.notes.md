@@ -5,6 +5,10 @@
 * https://www.youtube.com/@unprogramadornace/videos
 * https://www.youtube.com/watch?v=IPWBQDMIYkc
 
+
+## GIT
+git checkout -b 47_Avance47
+
 Rutas
 * https://www.youtube.com/watch?v=yOlaImDMaG8
 

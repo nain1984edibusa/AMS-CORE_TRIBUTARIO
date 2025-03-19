@@ -1,0 +1,61 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import t, ttest_ind
+
+# Datos
+monolitico = [0.94, 0.98 , 1.00, 0.99, 0.98, 0.99, 0.98, 1.01, 1.01, 1.02, 0.95, 1.02, 1.03, 1.03, 1.03]
+microservicios = [1.34, 1.70, 2.53, 2.78, 3.06, 1.52 , 2.68, 3.58, 4.18, 4.84 , 1.59, 2.93, 4.07, 5.01, 5.75]
+
+# Prueba t de Student
+t_stat, p_value = ttest_ind(monolitico, microservicios, equal_var=False)
+df = len(monolitico) + len(microservicios) - 2  # Grados de libertad
+
+# Distribución t de Student
+x = np.linspace(-5, 5, 1000)
+y = t.pdf(x, df)
+
+# Gráfico de la distribución t
+plt.figure(figsize=(10, 6))
+plt.plot(x, y, label='Distribución t', color='blue')
+
+# Regiones críticas
+alpha = 0.05
+t_critico = t.ppf(1 - alpha/2, df)
+
+# Área bajo la curva para regiones críticas
+plt.fill_between(x, 0, y, where=(x >= t_critico) | (x <= -t_critico), color='red', alpha=0.5, label='Región de rechazo')
+
+# T-statistic en la gráfica
+plt.axvline(t_stat, color='green', linestyle='--', linewidth=2, label=f'T-statistic: {t_stat:.2f}')
+
+# Configuración del gráfico
+plt.title('Distribución t de Student con Región de Rechazo')
+plt.xlabel('Valor t')
+plt.ylabel('Densidad de probabilidad')
+plt.axhline(0, color='black', linewidth=0.8)
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+# Gráfico
+plt.figure(figsize=(8, 5))
+plt.boxplot([monolitico, microservicios], labels=['Monolítico', 'Microservicios'])
+
+# Títulos y etiquetas
+plt.title('Comparación de rendimiento (Throughput): Monolítico vs Microservicios')
+plt.ylabel('Tiempo de respuesta (segundos)')
+plt.grid(True)
+
+# Mostrar resultados en el gráfico
+plt.figtext(0.15, 0.8, f'T-statistic: {t_stat:.2f}', fontsize=10)
+plt.figtext(0.15, 0.75, f'P-value: {p_value:.6f}', fontsize=10)
+
+plt.show()
+# Resultado de la prueba
+print(f"T-statistic: {t_stat:.2f}")
+print(f"P-value: {p_value:.6f}")
+if p_value < alpha:
+    print("Se rechaza la hipótesis nula: hay una diferencia significativa en el rendimiento (Throughput) de los microservicios.")
+else:
+    print("No se puede rechazar la hipótesis nula: No hay evidencia suficiente de mejora significativa.")
