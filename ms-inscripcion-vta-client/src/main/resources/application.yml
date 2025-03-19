@@ -46,9 +46,9 @@ spring:
 # SQL -Server # 
 
   r2dbc:
-    url: r2dbc:sqlserver://localhost/MDMQ_CORE_TRIBUTARIO # Ejemplo: r2dbc:sqlserver://localhost:1433/mi_base_datos
-    username: sa
-    password: Edibus@3130
+    url: r2dbc:sqlserver://172.22.16.34/MDMQ_CORE_TRIBUTARIO # Ejemplo: r2dbc:sqlserver://localhost:1433/mi_base_datos
+    username: GestionMunicipalCoreTributarioUsuario
+    password: Gestion%desa
    
 logging:
 #  file:

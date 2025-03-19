@@ -23,14 +23,12 @@ repositories {
 }
 
 ext {
- // para server-config se lo agrega a cada microservicio cliente
   	set('springCloudVersion', "2023.0.0")
  	set('springBootAdminVersion', "3.2.1")
 }
 
-
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+  implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
   implementation 'org.springframework.boot:spring-boot-starter-validation'
   implementation 'org.springframework.boot:spring-boot-starter-web'
   
@@ -40,7 +38,7 @@ dependencies {
   // eureka cliente
    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
   
-  //dashboard
+  //Admin dashboard
     implementation 'de.codecentric:spring-boot-admin-starter-client'
     
   compileOnly 'org.projectlombok:lombok'
@@ -55,7 +53,6 @@ dependencies {
    runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
   
    implementation('org.springframework.cloud:spring-cloud-starter-bootstrap')
-   
    testImplementation 'org.springframework.boot:spring-boot-starter-test'
   
 }
