@@ -8,7 +8,7 @@ spring:
     admin:
       ui:
         title: "AMS - Core Tributario"
-       # brand: "Core Tributario"
-        brand: "<img src='assets/img/logo.png' height='100 px'/><span>Arquitectura Microservicios</span>"
-        #favicon: "assets/img/favicon.ico"  # Personaliza el icono
-        #login-icon: "static/login-icon.png"  # Imagen en la pantalla de login
+#        brand: "Core Tributario"
+#        brand: "<img src='assets/img/logo.png' height='50px'/>"
+#        #favicon: "assets/img/favicon.ico"  # Personaliza el icono
+#        #login-icon: "static/login-icon.png"  # Imagen en la pantalla de login

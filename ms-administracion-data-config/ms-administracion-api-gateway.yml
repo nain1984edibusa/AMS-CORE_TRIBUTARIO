@@ -24,28 +24,44 @@ spring:
       discovery.locator:          
           enabled: true           
           lowerCaseServiceId: true
-
-# Automatico - Routers
-#      routes:
-#      - id: id-ms-instructor
-#        uri: lb://MS-GESTION-INSTRUCTOR
-#        predicates:
-#        - Path=/ms-instructor/**
-#        filters:         
-#        - RewritePath=/ms-instructor/(?<path>.*), /$\{path}        
-#      - id: albums
-#        uri: https://jsonplaceholder.typicode.com/albums
-#        predicates:
-#        - Path=/albums
+      httpclient:
+        pool:
+          max-connections: 200 # Ajusta según la carga esperada
+        connect-timeout: 10000 # Tiempo de espera para establecer la conexión (milisegundos)
+        response-timeout: 1200000 # Tiempo de espera para obtener una respuesta (milisegundos)
 
 # Personalizado - Routers
       routes:
-#      - id: id-ms-clientes
-#        uri: lb://MS-NEGOCIO-GESTION-CLIENTES
+#      - id: ms-negocio-gestion-catalogo
+#        uri: lb://ms-negocio-gestion-catalogo
 #        predicates:
-#        - Path=/ms-clientes/**
+#          - Path=/api/tipo-plan/**
+#          - Path=/api/parametro/**
+#          - Path=/api/tipo-contribuyente/**
+#          - Path=/api/tipo-proceso/**
+#          - Path=/api/tributo/**
+          
+      - id: ms-negocio-gestion-inscripcion-vta
+        uri: lb://ms-negocio-gestion-inscripcion-vta
+        predicates:
+          - Path=/api/inscripciones-vta/**
+
+#      - id: ms-administracion-server-registry
+#        uri: http://host.docker.internal:8761
+#        predicates:
+#          - Path=/eureka/**
+#          
+#      - id: ms-administracion-server-registry-static
+#        uri: http://host.docker.internal:8761
+#        predicates:
+#          - Path=/eureka/** 
+          
+#      - id: ms-negocio-gestion-catalogo-actuator
+#        uri: lb://MS-NEGOCIO-GESTION-CATALOGO/actuator
+#        predicates:
+#          - Path=/eureka/**  
 #        filters:         
-#        - RewritePath=/ms-clientes/(?<path>.*), /$\{path}        
+#        - RewritePath=/ms-instructor/(?<path>.*), /$\{path}        
 #      - id: albums
 #        uri: https://jsonplaceholder.typicode.com/albums
 #        predicates:

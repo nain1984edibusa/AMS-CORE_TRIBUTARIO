@@ -1,83 +1,84 @@
-##Tomcat Embedded Server Configuration
-#server:
-#   port: 9995
-#   
-## Sql Server #
-#spring:
-## SQL -Server # 
-#
-#  r2dbc:
-#    url: r2dbc:sqlserver://172.22.16.34:1433/MDMQ_CORE_TRIBUTARIO # Ejemplo: r2dbc:sqlserver://localhost:1433/mi_base_datos
-#    username: GestionMunicipalCoreTributarioUsuario
-#    password: Gestion%desa
-#    
-#  cloud:
-#    loadbalancer:
-#      retry:
-#        enabled: true # Activar reintentos en caso de fallos
-#    discovery:
-#      client:
-#        lowercase-service-id: true
-#        
-## Server Admin Client
-#  boot:
-#    admin:
-#      client:
-#        url: http://localhost:8890
-#        instance:
-#          management-base-url: http://localhost:${server.port}
-#          
-## Server Registry Client
-#eureka:
-#   client:
-#      fetch-registry: true
-#      serviceUrl:
-#         defaultZone: http://localhost:8889/eureka
-#   instance:
-#      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}  
-# 
-#logging:
-##  file:
-##    name: logs/application.log
-#  level:
-#    root: INFO
-#    io:
-#      github:
-#        resilience4j: DEBUG
-#                
-## Endpoints exposition
-## Acuator
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "health, prometheus"
-#  health:
-#    readinessstate:
-#      enabled: true
-#    livenessstate:
-#      enabled: true
-#  endpoint:
-#    health:
-#      probes:
-#        enabled: true 
-#  zipkin:
-#    tracing:
-#      endpoint: http://localhost:9411/api/v2/spans
-#  tracing:
-#    sampling:
-#      probability: 1.0
-#
-#resilience4j:
-#  circuitbreaker:
-#    instances:
-#      departmentService:
-#        registerHealthIndicator: true
-#        eventConsumerBufferSize: 10
-#        failureRateThreshold: 50
-#        minimumNumberOfCalls: 5
-#        automaticTransitionFromOpenToHalfOpenEnabled: true
-#        waitDurationInOpenState: 5s
-#        permittedNumberOfCallsInHalfOpenState: 3
-#        slidingWindowSize: 10
-#        slidingWindowType: COUNT_BASED
+#Tomcat Embedded Server Configuration
+server:
+#   port: ${PORT:0}
+   port: 9995
+
+# Server Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+        #defaultZone: http://host.docker.internal:8761/eureka
+        defaultZone: http://localhost:8889/eureka
+   instance:
+     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
+     
+spring:
+  application:
+    name: ms-inscripcion-vta-client
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true # Activar reintentos en caso de fallos
+    discovery:
+      client:
+        lowercase-service-id: true
+        
+# Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port} 
+
+
+#  webflux:
+#    data-buffer:
+#      max-in-memory-size: 500MB # O un valor más grande según tus necesidades
+  config:
+    import: optional:configserver:instead
+#  mvc:
+#    async:
+#      request-timeout: 60000  # 60 segundos
+  
+ 
+# SQL -Server # 
+
+  r2dbc:
+    url: r2dbc:sqlserver://172.22.16.34/MDMQ_CORE_TRIBUTARIO # Ejemplo: r2dbc:sqlserver://localhost:1433/mi_base_datos
+    username: GestionMunicipalCoreTributarioUsuario
+    password: Gestion%desa
+   
+logging:
+#  file:
+#    name: logs/application.log
+  level:
+    root: INFO
+    io:
+      github:
+        resilience4j: DEBUG
+    
+# Activacion de endpoints         
+management:
+     endpoints:
+       web:
+         exposure:
+           include: '*'
+     endpoint:
+       health:
+         show-details: always  
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      departmentService:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
