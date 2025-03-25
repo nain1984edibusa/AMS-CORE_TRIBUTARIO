@@ -1,4 +1,3 @@
-FROM openjdk
-ADD build/libs/ms-administracion-server-config*.jar ms-administracion-server-config-0.0.1.jar
-EXPOSE 8888
-ENTRYPOINT ["java","-jar","ms-administracion-server-config-0.0.1.jar"]
+FROM openjdk:17-jdk-alpine
+ADD build/libs/ms-administracion-server-config*.jar ms-administracion-server-config.jar
+ENTRYPOINT ["java","-jar","ms-administracion-server-config.jar"]

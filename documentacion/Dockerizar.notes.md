@@ -62,50 +62,17 @@ C:\AmbDesarrollo\AMS-CORE_TRIBUTARIO\demo>docker run -p 8082:8082 demo-v1
 
 
 ## DOCKERIZAR GRADLE - generar .jar
-Crear el build del proyecto
-gradle clean build
+##Crear el build del proyecto
+	gradle clean build
 
-Ejecutar el jar
+## Ejecutar el jar(opcionla)
 java -jar ms-gestion-tributo-0.0.1-SNAPSHOT.jar
 
-
-docker build -t ms-administracion-server-registry .
-docker run -p 8889:8889 ms-administracion-server-registry
-
-
-Crear el build del proyecto
-gradle clean build
-
-Ejecutar el jar
-java -jar ms-administracion-server-config-0.0.1-SNAPSHOT.jar
+## 
+docker build -t "server-config-image" .
+docker run -d --name server-config-dev -p 8888:8888 server-config-image
 
 
-#docker build -t ms-administracion-server-config .
-#docker run --name ms-administracion-server-config-depoly -p 8761:8761 ms-administracion-server-config
-
-docker build -t ms-administracion-server-registry .
-docker run --name ms-server-registry -p 8761:8761 ms-administracion-server-registry
-
-ms-administracion-api-gateway
-docker build -t ms-administracion-api-gateway .
-docker run --name ms-api-gateway -p 8080:8080 ms-administracion-api-gateway
-
-
-docker build -t ms-negocio-gestion-inscripcion-vta .
-docker run --name ms-inscripcion-vta -p 8193:8193 ms-negocio-gestion-inscripcion-vta
-docker run --name ms-inscripcion-vta -p ms-negocio-gestion-inscripcion-vta
-
-ms-negocio-gestion-inscripcion-vta_v2
-
-
-
-FROM openjdk
-ADD build/libs/ms-negocio-gestion-tributo*.jar ms-negocio-gestion-tributo-0.0.1.jar
-EXPOSE 8889
-ENTRYPOINT ["java","-jar","ms-negocio-gestion-tributo-0.0.1.jar"]
-
-docker build -t ms-negocio-gestion-tributo .
-docker run --name ms-negocio-gestion-tributo-deploy -p 9999:9999 ms-negocio-gestion-tributo
 
 
 ## JMETER MICROSERVICIOS 
