@@ -12,3 +12,4 @@ spring:
 #        brand: "<img src='assets/img/logo.png' height='50px'/>"
 #        #favicon: "assets/img/favicon.ico"  # Personaliza el icono
 #        #login-icon: "static/login-icon.png"  # Imagen en la pantalla de login
+
