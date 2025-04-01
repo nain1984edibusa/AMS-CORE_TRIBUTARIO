@@ -560,6 +560,26 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "ms-inscripcion-vta-client",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/ms-inscripcion-vta-client/actuator",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"ms-inscripcion-vta-client",
+												"actuator"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
