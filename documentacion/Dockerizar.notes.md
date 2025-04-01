@@ -69,11 +69,18 @@ C:\AmbDesarrollo\AMS-CORE_TRIBUTARIO\demo>docker run -p 8082:8082 demo-v1
 java -jar ms-gestion-tributo-0.0.1-SNAPSHOT.jar
 
 ## 
-docker build -t "server-config-image" .
-docker run -d --name server-config-dev -p 8888:8888 server-config-image
+docker build -t "ms-administracion-server-config-image" .
+docker run -d --name server-config-dev -p 8888:8888 ms-administracion-server-config-image
 
 
+docker build -t "ms-administracion-server-registry-image" .
+docker run -d --name server-registry-dev -p 8889:8889 ms-administracion-server-registry-image
 
+docker build -t "ms-negocio-gestion-catalogo-image" .
+docker run -d --name gestion-catalogo-dev -p 8190:8190 ms-negocio-gestion-catalogo-image
+
+docker build -t "ms-administracion-api-gateway-image" .
+docker run -d --name api-gateway-dev -p 8887:8887 ms-administracion-api-gateway-image
 
 ## JMETER MICROSERVICIOS 
  jmeter -n -t [jmx file] -l [results file] -e -o [Path to web report folder]

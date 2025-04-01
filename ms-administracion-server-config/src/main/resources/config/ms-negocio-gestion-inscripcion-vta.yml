@@ -1,0 +1,62 @@
+server:
+#   port: ${PORT:0}
+   port: 8193
+   
+# MySql #
+
+spring:
+  jpa: 
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: true
+  datasource: 
+    url: jdbc:sqlserver://172.22.16.34;trustServerCertificate=true;databaseName=MDMQ_CORE_TRIBUTARIO
+    username: GestionMunicipalCoreTributarioUsuario
+    password: Gestion%desa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+# Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:${server.port}
+          
+# Server Registry Client
+eureka:
+   client:
+#      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+   instance:
+     prefer-ip-address: true
+     instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}} 
+         
+# Endpoints exposition
+# Acuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health, prometheus"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true 
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0
+      
+info:
+  app:
+    name: ${spring.application.name}
+    description: Servicio de Inscripción
+    

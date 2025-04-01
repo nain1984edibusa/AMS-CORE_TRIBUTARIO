@@ -8,8 +8,8 @@ spring:
 #Configuracion Local
   profiles:
     active: native
-  cloud:
-    config:
-      server: 
-        native:
-          searchLocations: file:///C:/AmbDesarrollo/AMS-CORE_TRIBUTARIO/ms-administracion-data-config  
+#  cloud:
+#    config:
+#      server: 
+#        native:
+#          searchLocations: file:///C:/AmbDesarrollo/AMS-CORE_TRIBUTARIO/ms-administracion-data-config  
