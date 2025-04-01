@@ -540,6 +540,26 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "ms-negocio-gestion-catalogo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/ms-negocio-gestion-catalogo/actuator",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"ms-negocio-gestion-catalogo",
+												"actuator"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
@@ -560,6 +580,26 @@
 											"port": "8888",
 											"path": [
 												"ms-negocio-gestion-clientes",
+												"default"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ms-negocio-gestion-catalogo",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8888/ms-negocio-gestion-catalogo/default",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8888",
+											"path": [
+												"ms-negocio-gestion-catalogo",
 												"default"
 											]
 										}
@@ -636,6 +676,28 @@
 														"api",
 														"v1",
 														"tipo-plan"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "parametro-api-gateway",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-catalogo/api/v1/parametro",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-catalogo",
+														"api",
+														"v1",
+														"parametro"
 													]
 												}
 											},

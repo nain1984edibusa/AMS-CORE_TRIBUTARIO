@@ -4,5 +4,5 @@ import gob.mdmq.coretributario.msnegociogestiontributo.dto.ParametroDTO;
 
 public interface ParametroService extends GenericService<ParametroDTO>{
 	
-
+	String processPayment() throws ServiceException;
 }

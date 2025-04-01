@@ -34,22 +34,8 @@ public class ParametroController {
 	}
 	
 	
-	/*
-	 * @GetMapping("/by-razonSocial") public List<ClienteEntity>
-	 * findByLikeRazonSocial(@RequestParam String razonSocial) { return
-	 * clienteService.findByLikeRazonSocial(razonSocial); }
-	 * 
-	 * @GetMapping("/{id}") public Optional<ClienteEntity> findById(@PathVariable
-	 * Long id) { return clienteService.findById(id); }
-	 * 
-	 * @PostMapping public ClienteEntity save(@RequestBody ClienteEntity
-	 * clienteEntity) { return clienteService.save(clienteEntity); }
-	 * 
-	 * @PutMapping("/{id}") public ClienteEntity update(@PathVariable Long
-	 * id, @RequestBody ClienteEntity clienteEntity) { clienteEntity.setId(id);
-	 * return clienteService.update(clienteEntity); }
-	 * 
-	 * @DeleteMapping("/{id}") public void delete(@PathVariable Long id) {
-	 * clienteService.delete(id); }
-	 */
+	@GetMapping("/processPayment")  
+	public String processPayment() throws ServiceException {
+	    return clienteService.processPayment();
+	 }
 }
