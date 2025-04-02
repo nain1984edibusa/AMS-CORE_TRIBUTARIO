@@ -12,7 +12,7 @@ docker pull mongodb/mongodb-community-server:latest
 
 ## Instalacion - Con Docker (funciono!!)
 ```
-docker run --name mongo-dev -p 27017:27017 -d mongodb/mongodb-community-server:latest
+docker run --name parametro-dev -p 27017:27017 -d mongodb/mongodb-community-server:latest
 ```
 
 ## Mongo shell

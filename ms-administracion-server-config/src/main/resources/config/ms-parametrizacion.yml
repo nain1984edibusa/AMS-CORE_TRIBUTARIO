@@ -1,0 +1,56 @@
+server:
+   port: 8290
+   
+# Mongo DB #
+spring:
+ application:
+    name: ms-parametrizacion
+ data:
+  mongodb:
+   host: localhost
+   port: 27017
+   database: parametro_dev
+   auto-index-creation: false
+#   username: sa
+#   password: sa
+   
+# Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+#          management-base-url: http://localhost:${server.port}
+          prefer-ip: true
+          
+# Server Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+   instance:
+      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}        
+
+# Endpoints exposition
+# Acuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true 
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+  tracing:
+    sampling:
+      probability: 1.0

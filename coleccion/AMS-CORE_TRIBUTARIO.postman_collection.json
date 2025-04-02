@@ -580,6 +580,27 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "ms-parametrizacion",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8887/ms-parametrizacion/actuator/health",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8887",
+											"path": [
+												"ms-parametrizacion",
+												"actuator",
+												"health"
+											]
+										}
+									},
+									"response": []
 								}
 							]
 						},
@@ -1175,6 +1196,151 @@
 							"response": []
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "parametrizacion",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"descripcionParametro\":\"SALARIO MINIMO VITAL\",\r\n    \"valorNumerico\": 470.00,\r\n    \"valorCaracter\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"ms-parametrizacion",
+								"api",
+								"v1",
+								"parametro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"ms-parametrizacion",
+								"api",
+								"v1",
+								"parametro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"ms-parametrizacion",
+								"api",
+								"v1",
+								"parametro",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"descripcionParametro\":\"SALARIO MINIMO VITAL\",\r\n    \"valorNumerico\": 475.00,\r\n    \"valorCaracter\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"ms-parametrizacion",
+								"api",
+								"v1",
+								"parametro",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"descripcionParametro\":\"SALARIO MINIMO VITAL\",\r\n    \"valorNumerico\": 475.00,\r\n    \"valorCaracter\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8887",
+							"path": [
+								"ms-parametrizacion",
+								"api",
+								"v1",
+								"parametro",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

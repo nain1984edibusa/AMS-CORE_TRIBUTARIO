@@ -13,3 +13,8 @@ spring:
 #        #favicon: "assets/img/favicon.ico"  # Personaliza el icono
 #        #login-icon: "static/login-icon.png"  # Imagen en la pantalla de login
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Para que todos los endpoints estén visibles
