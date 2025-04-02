@@ -870,13 +870,14 @@
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "http://localhost:9995/obtener-inscripcion",
+													"raw": "http://localhost:8887/ms-inscripcion-vta-client/obtener-inscripcion",
 													"protocol": "http",
 													"host": [
 														"localhost"
 													],
-													"port": "9995",
+													"port": "8887",
 													"path": [
+														"ms-inscripcion-vta-client",
 														"obtener-inscripcion"
 													]
 												}
