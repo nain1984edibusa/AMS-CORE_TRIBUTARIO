@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1eb95e1f-2bf0-4edc-9040-f6d0f046afab",
+		"_postman_id": "7f1e411e-8ee8-44ab-9887-b1911c05a536",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -887,58 +887,6 @@
 									]
 								},
 								{
-									"name": "ms-negocio-gestion-inscripcion-vta_v2",
-									"item": [
-										{
-											"name": "inscripcion-vta-api-gateway",
-											"request": {
-												"method": "GET",
-												"header": [],
-												"url": {
-													"raw": "http://localhost:8887/ms-negocio-gestion-inscripcion-vta/api/v1/inscripcion-vta",
-													"protocol": "http",
-													"host": [
-														"localhost"
-													],
-													"port": "8887",
-													"path": [
-														"ms-negocio-gestion-inscripcion-vta",
-														"api",
-														"v1",
-														"inscripcion-vta"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
-									"name": "ms-autenticacion-server-security",
-									"item": [
-										{
-											"name": "auth",
-											"request": {
-												"method": "POST",
-												"header": [],
-												"url": {
-													"raw": "http://localhost:8080/auth/login",
-													"protocol": "http",
-													"host": [
-														"localhost"
-													],
-													"port": "8080",
-													"path": [
-														"auth",
-														"login"
-													]
-												}
-											},
-											"response": []
-										}
-									]
-								},
-								{
 									"name": "ms-inscripcion-vta-client",
 									"item": [
 										{
@@ -1077,34 +1025,19 @@
 			"name": "autorizacion",
 			"item": [
 				{
-					"name": "ms-administracion-server-security-jwt",
+					"name": "ms-autenticacion-jwt",
 					"item": [
 						{
-							"name": "autho",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
+							"name": "auth-login",
 							"request": {
 								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "username",
-											"value": "santiago",
-											"type": "string"
-										},
-										{
-											"key": "password",
-											"value": "1234",
-											"type": "string"
-										}
-									]
+									"type": "bearer"
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "",
+									"raw": "    {\r\n        \"username\": \"eduardo.bustillos@quito.gob.ec\",\r\n        \"password\": \"A123456a\"\r\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1112,7 +1045,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/auth/hello",
+									"raw": "http://localhost:8080/auth/login",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1120,34 +1053,43 @@
 									"port": "8080",
 									"path": [
 										"auth",
-										"hello"
+										"login"
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "autho-security",
+							"name": "autho-registry",
 							"request": {
 								"auth": {
 									"type": "basic",
 									"basic": [
 										{
-											"key": "username",
-											"value": "anyi",
+											"key": "password",
+											"value": "",
 											"type": "string"
 										},
 										{
-											"key": "password",
-											"value": "1234",
+											"key": "username",
+											"value": "",
 											"type": "string"
 										}
 									]
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"username\": \"eduardo.bustillos@quito.gob.ec\",\r\n        \"password\": \"A123456a\",\r\n        \"lastname\": \"Bustillos Allauca\",\r\n        \"firstname\": \"Eduardo Marcelo\",\r\n        \"country\": \"Ecuador\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "http://localhost:8080/auth/hello-security",
+									"raw": "http://localhost:8080/auth/register",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -1155,42 +1097,7 @@
 									"port": "8080",
 									"path": [
 										"auth",
-										"hello-security"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "ms-autenticacion-server",
-							"request": {
-								"auth": {
-									"type": "basic",
-									"basic": [
-										{
-											"key": "username",
-											"value": "ANYI",
-											"type": "string"
-										},
-										{
-											"key": "password",
-											"value": "1234",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/auth/get",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"auth",
-										"get"
+										"register"
 									]
 								}
 							},
@@ -1262,7 +1169,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro/2",
+							"raw": "http://localhost:8887/ms-parametrizacion/api/v1/parametro/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1273,7 +1180,7 @@
 								"api",
 								"v1",
 								"parametro",
-								"2"
+								"1"
 							]
 						}
 					},
