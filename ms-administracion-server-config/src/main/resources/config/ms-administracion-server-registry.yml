@@ -3,7 +3,7 @@ server:
 
 eureka:
    instance:
-      hostname: host.docker.internal
+      hostname: localhosst
    client:
         register-with-eureka: false
         fetch-registry: false
