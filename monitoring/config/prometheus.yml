@@ -73,8 +73,20 @@ scrape_configs:
       - targets: ['host.docker.internal:9995']
         labels:
          application: 'ms-inscripcion-vta-client'
+  
+  - job_name: 'ms-parametrizacion'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8290']
+        labels:
+         application: 'ms-parametrizacion'
 
-
+  - job_name: 'ms-autenticacion-jwt'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:8080']
+        labels:
+         application: 'ms-autenticacion-jwt'
 
 ##################################################################################################################    
 ##################################################################################################################    

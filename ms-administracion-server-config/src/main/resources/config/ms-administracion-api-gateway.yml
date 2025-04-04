@@ -6,6 +6,7 @@ eureka:
    client:
       fetch-registry: true
       serviceUrl:
+         #defaultZone: http://host.docker.internal:8889/eureka
          defaultZone: http://localhost:8889/eureka
    instance:
       instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}        

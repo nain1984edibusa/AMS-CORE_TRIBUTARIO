@@ -20,9 +20,8 @@ spring:
       client:
         url: http://localhost:8890
         instance:
-#          management-base-url: http://localhost:${server.port}
-          prefer-ip: true
-          
+          management-base-url: http://localhost:${server.port}
+               
 # Server Registry Client
 eureka:
    client:
@@ -30,6 +29,7 @@ eureka:
       serviceUrl:
          defaultZone: http://localhost:8889/eureka
    instance:
+      prefer-ip-address: true
       instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}        
 
 # Endpoints exposition
