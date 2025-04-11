@@ -10,7 +10,7 @@
 			"name": "negocio",
 			"item": [
 				{
-					"name": "ms-negocio-gestion-contribuyente",
+					"name": "ms-negocio-gestion-clientes",
 					"item": [
 						{
 							"name": "findAll",
@@ -18,16 +18,64 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8091/api/v1/contribuyente",
+									"raw": "http://localhost:8082/api/v1/clientes",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
-									"port": "8091",
+									"port": "8082",
 									"path": [
 										"api",
 										"v1",
-										"contribuyente"
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8082/api/v1/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"v1",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "ms-negocio-gestion-productos",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/api/v1/productos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"api",
+										"v1",
+										"productos"
 									]
 								}
 							},
@@ -863,7 +911,12 @@
 												}
 											},
 											"response": []
-										},
+										}
+									]
+								},
+								{
+									"name": "ms-inscripcion-vta-client",
+									"item": [
 										{
 											"name": "obtener-inscripcion",
 											"request": {
@@ -887,23 +940,52 @@
 									]
 								},
 								{
-									"name": "ms-inscripcion-vta-client",
+									"name": "ms-negocio-gestion-clientes",
 									"item": [
 										{
-											"name": "ms-inscripcion-vta-client",
+											"name": "ms-negocio-gestion-cliente",
 											"request": {
 												"method": "GET",
 												"header": [],
 												"url": {
-													"raw": "http://localhost:8887/ms-inscripcion-vta-client/obtener-inscripcion",
+													"raw": "http://localhost:8887/ms-negocio-gestion-clientes/api/v1/clientes",
 													"protocol": "http",
 													"host": [
 														"localhost"
 													],
 													"port": "8887",
 													"path": [
-														"ms-inscripcion-vta-client",
-														"obtener-inscripcion"
+														"ms-negocio-gestion-clientes",
+														"api",
+														"v1",
+														"clientes"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "ms-negocio-gestion-productos",
+									"item": [
+										{
+											"name": "ms-negocio-gestion-productos",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-productos/api/v1/productos",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-productos",
+														"api",
+														"v1",
+														"productos"
 													]
 												}
 											},

@@ -40,7 +40,7 @@ dependencies {
   // eureka cliente
    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
   
-  //dashboard
+  //Admin dashboard
     implementation 'de.codecentric:spring-boot-admin-starter-client'
     
   compileOnly 'org.projectlombok:lombok'
@@ -50,9 +50,7 @@ dependencies {
   
   //HEALT CHECK para funcionar en postman   
   implementation 'org.springframework.boot:spring-boot-starter-actuator'
-  implementation 'io.micrometer:micrometer-tracing-bridge-brave'
-  implementation 'io.zipkin.reporter2:zipkin-reporter-brave'
-  runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+
   
   implementation('org.springframework.cloud:spring-cloud-starter-bootstrap')
    

@@ -14,3 +14,5 @@ docker pull mysql
  docker run -d --name db_security-dev -e "MYSQL_DATABASE=db_security" -e "MYSQL_USER=uncledave" -e "MYSQL_PASSWORD=Test@123" -e "MYSQL_ROOT_PASSWORD=root" -p 3307:3306  mysql
 
 ```
+
+ docker run -d --name db-productos-dev -e "MYSQL_DATABASE=db_ms_productos" -e "MYSQL_USER=userdev" -e "MYSQL_PASSWORD=Test@123" -e "MYSQL_ROOT_PASSWORD=root" -p 3309:3306  mysql

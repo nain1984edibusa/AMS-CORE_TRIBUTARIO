@@ -12,8 +12,14 @@ public class ClienteMapperImpl implements ClienteMapper {
 
 	@Override
 	public ClienteDTO toDTO(ClienteEntity e) {
-		return ClienteDTO.builder().id(e.getId()).razonSocial(e.getRazonSocial()).correo(e.getCorreo())
-				.direccion(e.getDireccion()).build();
+		return ClienteDTO.builder()
+							.id(e.getId())
+							.razonSocial(e.getRazonSocial())
+							.correo(e.getCorreo())
+							.ruc(e.getRuc())
+							.telefono(e.getTelefono())
+							.estado(e.getEstado())
+							.direccion(e.getDireccion()).build();
 	}
 
 	@Override
