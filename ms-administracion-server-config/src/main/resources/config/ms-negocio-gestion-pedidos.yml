@@ -1,0 +1,41 @@
+server:
+   port: 8084
+# MySql #
+
+spring:
+  jpa: 
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate: 
+      ddl-auto: create
+    show-sql: true
+  datasource: 
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3310/db_ms_pedidos?createDatabaseIfNotExist=true&useSSL=true
+    username: userdev
+    password: Test@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#spring.jpa.show-sql: true
+
+# Server Admin Client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8890
+        instance:
+          management-base-url: http://localhost:8082
+        
+# Server Registry Client
+eureka:
+   client:
+      fetch-registry: true
+      serviceUrl:
+         defaultZone: http://localhost:8889/eureka
+   instance:
+      instance-id: ${spring.application.name}:${server.port}-${spring.application.instance_id:${random.value}}  	
+# Endpoints exposition
+management:
+  endpoints:
+    web:
+     exposure:
+       include: "*"
+     health:
+       show-details: always

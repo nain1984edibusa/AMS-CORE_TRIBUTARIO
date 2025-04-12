@@ -29,16 +29,34 @@ services:
       - 3309:3306
     expose:
       - 3306
-  
+
   db-pedidos:
     container_name: db-pedidos
-    image: gvenzl/oracle-xe:latest
+    image: mysql:latest
     restart: unless-stopped
     environment:
-      ORACLE_PASSWORD: oracle
-      APP_USER: userdev
-      APP_USER_PASSWORD: Test@123
+      MYSQL_DATABASE: db_ms_pedidos
+      MYSQL_USER: userdev
+      MYSQL_PASSWORD: Test@123
+      MYSQL_ROOT_PASSWORD: root
     ports:
-      - 1521:1521
+      - 3310:3306
     expose:
-      - 1521
+      - 3306
+  
+#   db-pedidos:
+#     container_name: db-pedidos
+#     image: gvenzl/oracle-xe:latest
+#     restart: unless-stopped
+#     environment:
+#       ORACLE_PASSWORD: oracle
+#       APP_USER: userdev
+#       APP_USER_PASSWORD: Test@123
+#     ports:
+#       - 1521:1521
+#     networks:
+#       - microservicios
+
+# networks:
+#   microservicios:
+#     driver: bridge
