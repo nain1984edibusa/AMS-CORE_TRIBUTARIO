@@ -50,7 +50,8 @@ public class ClienteServiceImpl implements ClienteService {
 	@Override
 	public Optional<ClienteDTO> findById(Long id) throws ServiceException {
 		// TODO Auto-generated method stub
-		return Optional.empty();
+		return clienteRepository.findById(id)
+	            .map(clienteMapper::toDTO); // Si existe, lo mapea; si no, devuelve Optional.empty()
 	}
 
 }

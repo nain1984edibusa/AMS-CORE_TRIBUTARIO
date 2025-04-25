@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "09fb7d8a-caea-4a76-9816-2528fbb13bae",
+		"_postman_id": "081ee87f-3938-4e90-8306-c3dcf82d1728",
 		"name": "AMS-CORE_TRIBUTARIO",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26510914"
@@ -87,7 +87,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8085/api/v1/contribuyente/1",
+									"raw": "http://localhost:8085/api/v1/productos/1",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -96,7 +96,7 @@
 									"path": [
 										"api",
 										"v1",
-										"contribuyente",
+										"productos",
 										"1"
 									]
 								}
@@ -354,7 +354,7 @@
 										"method": "GET",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8190/api/v1/tipo-plan/2",
+											"raw": "http://localhost:8190/api/v1/tipo-plan/1",
 											"protocol": "http",
 											"host": [
 												"localhost"
@@ -364,7 +364,7 @@
 												"api",
 												"v1",
 												"tipo-plan",
-												"2"
+												"1"
 											]
 										}
 									},
@@ -943,7 +943,7 @@
 									"name": "ms-negocio-gestion-clientes",
 									"item": [
 										{
-											"name": "ms-negocio-gestion-cliente",
+											"name": "findAll",
 											"request": {
 												"method": "GET",
 												"header": [],
@@ -959,6 +959,29 @@
 														"api",
 														"v1",
 														"clientes"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "findById",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "http://localhost:8887/ms-negocio-gestion-clientes/api/v1/clientes/1",
+													"protocol": "http",
+													"host": [
+														"localhost"
+													],
+													"port": "8887",
+													"path": [
+														"ms-negocio-gestion-clientes",
+														"api",
+														"v1",
+														"clientes",
+														"1"
 													]
 												}
 											},

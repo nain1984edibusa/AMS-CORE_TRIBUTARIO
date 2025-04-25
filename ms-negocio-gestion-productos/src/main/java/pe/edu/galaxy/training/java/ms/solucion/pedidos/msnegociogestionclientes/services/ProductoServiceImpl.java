@@ -14,13 +14,13 @@ import pe.edu.galaxy.training.java.ms.solucion.pedidos.msnegociogestionclientes.
 @Service
 public class ProductoServiceImpl implements ProductoService {
 	
-	private final ProductoRepository clienteRepository;
-	private final ProductoMapper clienteMapper;
+	private final ProductoRepository productoRepository;
+	private final ProductoMapper productoMapper;
 
 	@Override
 	public List<ProductoDTO> findAll() throws ServiceException {
 		
-		return this.clienteMapper.toDTO(this.clienteRepository.findAll());
+		return this.productoMapper.toDTO(this.productoRepository.findAll());
 	}
 
 	@Override
@@ -50,7 +50,8 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public Optional<ProductoDTO> findById(Long id) throws ServiceException {
 		// TODO Auto-generated method stub
-		return Optional.empty();
+		return productoRepository.findById(id)
+	            .map(productoMapper::toDTO); //
 	}
 
 }
