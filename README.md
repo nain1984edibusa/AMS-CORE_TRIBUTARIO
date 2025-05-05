@@ -40,3 +40,54 @@ Ante este contexto, se evidencia la necesidad de una reingeniería de software q
 En este marco, la investigación propone el diseño de un prototipo de arquitectura basada en microservicios, utilizando tecnologías como Spring Boot, Docker y Prometheus, junto con prácticas como API REST, monitoreo distribuido y patrones de resiliencia. Esta solución permite desacoplar funcionalidades, habilitar pruebas y despliegues independientes, escalar componentes según la demanda específica y mejorar sustancialmente la mantenibilidad y trazabilidad del sistema.
 
 Por tanto, esta propuesta no solo atiende un problema real en contextos críticos como el de la Gestión Tributaria, sino que además ofrece una solución técnicamente viable, moderna y alineada con las mejores prácticas de la ingeniería de software contemporánea.
+
+### Formulación del problema
+
+🟦 Inicio - Enfoque central
+“El problema central que motiva esta investigación es la falta de una arquitectura moderna, por lo que es conviniente preguntarse: ¿Cómo diseñar una arquitectura de microservicios que permita mejorar la escalabilidad y mantenibilidad del Proceso de Gestión Tributaria?”
+
+🔧 Causas (lado izquierdo)
+“Entre las principales causas del problema identificamos, en primer lugar, la arquitectura monolítica legada, que centraliza toda la lógica del sistema en un solo bloque, dificultando su evolución.”
+
+“En segundo lugar, encontramos el fuerte acoplamiento entre módulos funcionales, lo que significa que las partes del sistema están estrechamente interconectadas, y cualquier cambio implica riesgos generalizados.”
+
+“También se evidencia la falta de despliegue independiente por componente, lo cual impide actualizar o escalar partes específicas del sistema sin afectar el resto.”
+
+“Y por último, la ausencia de herramientas de monitoreo y trazabilidad distribuida, lo que limita la visibilidad del comportamiento del sistema en tiempo real.”
+
+⚠️ Consecuencias (lado derecho)
+
+“Estas causas generan diversas consecuencias negativas para el proceso de Gestión Tributaria. Por ejemplo, un aumento del tiempo y costo de mantenimiento, ya que cualquier cambio requiere intervención sobre todo el sistema.”
+
+“También se presenta un alto riesgo de fallos generalizados al modificar el sistema, lo que afecta la estabilidad del servicio.”
+
+“Además, se observa lentitud en la implementación de nuevos requerimientos tributarios, lo cual compromete la capacidad de adaptación del sistema ante nuevas normativas.”
+
+“Y finalmente, se produce una reducción en la calidad del servicio al contribuyente, afectando la experiencia y eficiencia en la atención.”
+
+ Cierre
+“En conjunto, estas causas y consecuencias justifican la necesidad de proponer una solución moderna y desacoplada. Por ello, esta investigación plantea un prototipo basado en microservicios como alternativa para optimizar la escalabilidad, mantenibilidad y adaptabilidad del proceso de Gestión Tributaria.”
+
+🎤 Guion para exponer la lámina de Objetivos
+🟦 Inicio: Introducción general
+“En esta lámina se presentan los objetivos de la investigación, divididos en un objetivo general que guía todo el estudio, y cuatro objetivos específicos que definen las acciones concretas a realizar.”
+
+🎯 Objetivo general
+“El objetivo general de esta investigación es diseñar un prototipo de arquitectura de microservicios que permita mejorar los factores de escalabilidad y mantenibilidad del Proceso de Gestión Tributaria.”
+
+“Este objetivo responde directamente a las limitaciones identificadas previamente en el sistema actual, y orienta la propuesta hacia una solución técnica viable.”
+
+🔹 Objetivo específico 1: Marco teórico
+“El primer objetivo específico es analizar el contexto evolutivo de la arquitectura de software, enfocándose en la comparación entre la arquitectura monolítica y la de microservicios. Esto permitirá construir un marco teórico sólido que fundamente la propuesta.”
+
+🔹 Objetivo específico 2: Diseño del prototipo
+“El segundo objetivo es diseñar un prototipo funcional de arquitectura de microservicios que incorpore servicios web como base tecnológica, y que garantice tanto la escalabilidad como la mantenibilidad.”
+
+🔹 Objetivo específico 3: Comparación entre arquitecturas
+“En tercer lugar, se plantea realizar un análisis técnico y funcional comparativo entre las arquitecturas de microservicios y monolítica, usando entornos controlados que permitan observar diferencias medibles en rendimiento, adaptabilidad y mantenibilidad.”
+
+🔹 Objetivo específico 4: Evaluación del prototipo
+“Finalmente, se busca evaluar la escalabilidad bajo demanda y la mantenibilidad del prototipo propuesto, utilizando herramientas de monitoreo para comprobar su rendimiento y su capacidad de gestión eficiente de recursos.”
+
+🟦 Cierre
+“Estos objetivos están alineados entre sí y responden directamente a la pregunta de investigación. A través de ellos, la tesis busca no solo proponer una solución arquitectónica, sino demostrar con evidencia técnica que dicha solución mejora el proceso de Gestión Tributaria.”
