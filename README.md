@@ -91,3 +91,23 @@ Por tanto, esta propuesta no solo atiende un problema real en contextos crítico
 
 🟦 Cierre
 “Estos objetivos están alineados entre sí y responden directamente a la pregunta de investigación. A través de ellos, la tesis busca no solo proponer una solución arquitectónica, sino demostrar con evidencia técnica que dicha solución mejora el proceso de Gestión Tributaria.”
+
+🎤 Guion para sustentar la lámina de la Hipótesis
+
+🟦 Introducción breve
+
+“A partir del análisis del problema, sus causas y consecuencias, y en coherencia con los objetivos planteados, se establece la siguiente hipótesis como base para validar esta investigación.”
+
+📌 Lectura de la hipótesis
+
+“Al implementar una arquitectura basada en microservicios en el proceso de gestión tributaria, se logrará una mejora en la escalabilidad y mantenibilidad del sistema.”
+
+🔍 Explicación de su sentido
+
+“Esta hipótesis parte de la premisa de que la arquitectura de microservicios, al ser modular, desacoplada y fácilmente escalable, representa una solución efectiva para superar las limitaciones técnicas del modelo monolítico actual.”
+
+“Lo que se espera validar es que, al aplicar esta arquitectura en un entorno funcional —específicamente en el Proceso de Gestión Tributaria—, se evidencien mejoras tangibles en dos factores clave: escalabilidad, es decir, la capacidad del sistema para crecer de manera controlada; y mantenibilidad, que implica menor esfuerzo para modificar o corregir el sistema sin afectar su funcionamiento global.”
+
+✅ Cierre
+
+“Esta hipótesis será comprobada a través del diseño y evaluación de un prototipo funcional, cuyos resultados se comprobarán mediante pruebas técnicas, herramientas de monitoreo y análisis comparativo.”
